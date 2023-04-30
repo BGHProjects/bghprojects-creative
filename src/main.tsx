@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
-import TestPage from "./pages/TestPage.tsx";
+import TestPage from "./routes/TestPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,9 +20,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider>
-      <RouterProvider router={router}>
-        <App />
-      </RouterProvider>
+      <RouterProvider router={router} />
     </ChakraProvider>
   </React.StrictMode>
 );
