@@ -67,3 +67,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@font-face {
+  font-family: "Electrolize";
+  src: url("/assets/fonts/Electrolize/Electrolize-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

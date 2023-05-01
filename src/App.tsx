@@ -1,7 +1,7 @@
-import { Flex } from "@chakra-ui/react";
+import Home from "./pages/Home";
 
 function App() {
-  return <Flex w="100vw" h="100vh" bg="red" />;
+  return <Home />;
 }
 
 export default App;
