@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
-import { Center } from "@chakra-ui/react";
+import LoadingPage from "./pages/LoadingPage";
 
 const App = () => {
   const [isFontLoaded, setIsFontLoaded] = useState(false);
@@ -23,11 +23,7 @@ const App = () => {
     checkFontLoad();
   }, []);
 
-  return isFontLoaded ? (
-    <Home />
-  ) : (
-    <Center w="100vw" h="100vh" bg="black" position="relative" />
-  );
+  return isFontLoaded ? <Home /> : <LoadingPage />;
 };
 
 export default App;
