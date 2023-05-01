@@ -1,36 +1,20 @@
 import { motion } from "framer-motion";
 import { range } from "lodash";
-import DefaultScreenBlob from "./DefaultScreenBlob";
+import DefaultScreenBar from "./DefaultScreenBar";
 
 const ScreenAnimation = () => {
-  const variants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 2,
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <motion.div
       style={{
         height: "100vh",
-        width: "100vw",
+        width: "150vw",
         position: "absolute",
         overflow: "hidden",
+        rotate: 45,
       }}
-      variants={variants}
-      initial="hidden"
-      animate="visible"
     >
-      {range(20).map((item) => (
-        <DefaultScreenBlob key={item} />
+      {range(30).map((item) => (
+        <DefaultScreenBar key={item} />
       ))}
     </motion.div>
   );
