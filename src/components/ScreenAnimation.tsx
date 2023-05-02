@@ -13,7 +13,7 @@ const ScreenAnimation = () => {
         rotate: 45,
       }}
     >
-      {range(30).map((item) => (
+      {range(60).map((item) => (
         <DefaultScreenBar key={item} />
       ))}
     </motion.div>

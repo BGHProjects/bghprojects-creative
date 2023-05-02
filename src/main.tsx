@@ -6,6 +6,7 @@ import App from "./App.tsx";
 import CustomCursor from "./components/CustomCursor.tsx";
 import "./index.css";
 import TestPage from "./pages/TestPage.tsx";
+import { AppStateContextProvider } from "./contexts/AppStateContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,10 @@ const theme = extendTheme({
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
-      <CustomCursor />
+      <AppStateContextProvider>
+        <RouterProvider router={router} />
+        <CustomCursor />
+      </AppStateContextProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

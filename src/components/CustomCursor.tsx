@@ -1,13 +1,21 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useAppContext } from "../contexts/AppStateContext";
 
 const cursorSize = 30;
+const fullSize = `${cursorSize}px`;
+const halfSize = `${cursorSize / 2}px`;
+const toFullSize = [halfSize, fullSize];
+const toHalfSize = [fullSize, halfSize];
 
 /**
  * Custom cursor that is shown throughout the app
  */
 const CustomCursor = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const { mouseHovering } = useAppContext();
+
+  const handleHover = mouseHovering ? toHalfSize : toFullSize;
 
   const handleMouseMove = (e: any) => {
     const { clientX, clientY } = e;
@@ -16,20 +24,6 @@ const CustomCursor = () => {
     const x = clientX > maxX ? maxX : clientX;
     const y = clientY > maxY ? maxY : clientY;
     setCursorPos({ x, y });
-  };
-
-  const variants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 2,
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
   };
 
   useEffect(() => {
@@ -42,18 +36,31 @@ const CustomCursor = () => {
   return (
     <motion.div
       style={{
-        height: `${cursorSize}px`,
-        width: `${cursorSize}px`,
+        height: fullSize,
+        width: fullSize,
         background: "transparent",
         border: "2px solid white",
-        borderRadius: `${cursorSize}px`,
+        borderRadius: fullSize,
         position: "absolute",
         top: `${cursorPos.y}px`,
         left: `${cursorPos.x}px`,
+        zIndex: 99999,
       }}
-      variants={variants}
-      initial="hidden"
-      animate="visible"
+      animate={{
+        opacity: [0, 1],
+        height: handleHover,
+        width: handleHover,
+        background: mouseHovering
+          ? ["transparent", "white"]
+          : ["white", "transparent"],
+      }}
+      transition={{
+        opacity: {
+          delay: 2,
+          duration: 2,
+          ease: "easeInOut",
+        },
+      }}
     />
   );
 };

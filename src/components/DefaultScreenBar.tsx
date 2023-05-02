@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import getRandomNumber from "../helpers/getRandomNumber";
 
+const lightness = 30;
+
 const DefaultScreenBar = () => {
-  const [barY] = useState(getRandomNumber(0, 80));
+  const [barY] = useState(getRandomNumber(0, 100));
   const [barWidth] = useState(getRandomNumber(50, 100));
   const [barHeight] = useState(getRandomNumber(10, 50));
 
@@ -20,19 +22,18 @@ const DefaultScreenBar = () => {
       }}
       animate={{
         backgroundColor: [
-          `hsl(0,100,50)`,
-          `hsl(360,100,50)`,
-          `hsl(240,100,50)`,
-          `hsl(360,100,50)`,
-          `hsl(240,100,50)`,
-          `hsl(360,100,50)`,
-          `hsl(0,100,50)`,
+          `hsl(0,100,${lightness})`,
+          `hsl(360,100,${lightness})`,
+          `hsl(240,100,${lightness})`,
+          `hsl(360,100,${lightness})`,
+          `hsl(240,100,${lightness})`,
+          `hsl(360,100,${lightness})`,
+          `hsl(0,100,${lightness})`,
         ],
         x: [
           `${coinFlipResult ? `-${barWidth + 10}vw` : "150vw"}`,
           `${coinFlipResult ? "150vw" : `-${barWidth + 10}vw`}`,
         ],
-        filter: [`blur(5px)`, `blur(20px)`, `blur(5px)`],
       }}
       transition={{
         delay: getRandomNumber(1, 5),
