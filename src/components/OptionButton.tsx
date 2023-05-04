@@ -1,9 +1,9 @@
-import { Center } from "@chakra-ui/react";
+import { Center, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { useAppContext } from "../contexts/AppStateContext";
+import useOptionButton from "../hooks/componentHooks/useOptionButton";
 
 const animDuration = 0.2;
+const textDropDistance = 80;
 
 interface IOptionButton {
   text: string;
@@ -11,6 +11,7 @@ interface IOptionButton {
   width: number;
   height: number;
   fontSize?: number;
+  animDelay?: number;
 }
 
 /**
@@ -21,44 +22,19 @@ interface IOptionButton {
  * @param width The width of the button
  * @param height The height of the button
  * @param fontSize The fontsize of the title of the button
+ * @param animDelay The delay for the animations
  */
 const OptionButton = ({
   text,
   width,
   height,
   fontSize = 16,
+  animDelay = 0,
+  image = null,
 }: IOptionButton) => {
-  const [justRendered, setjustRendered] = useState(true);
-  const [hovering, setHovering] = useState(false);
-
-  const { setMouseHovering } = useAppContext();
-
-  const textVariants = {
-    hidden: {
-      display: "none",
-      opacity: 0,
-    },
-    visible: {
-      display: "flex",
-      opacity: 1,
-      transition: {
-        ease: "easeInOut",
-        delay: animDuration * 5,
-        duration: animDuration,
-      },
-    },
-  };
-
-  const handleMouseEnter = () => {
-    setjustRendered(false);
-    setHovering(true);
-    setMouseHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovering(false);
-    setMouseHovering(false);
-  };
+  const { state, functions } = useOptionButton(animDelay);
+  const { justRendered, hovering, animationDelay } = state;
+  const { handleMouseEnter, handleMouseLeave, handleHoverState } = functions;
 
   return (
     <motion.div
@@ -80,23 +56,26 @@ const OptionButton = ({
         opacity: [0, 1],
         width: [0, width],
         height: [0, height],
-        scale: justRendered ? 1 : hovering ? [1, 1.1] : [1.1, 1],
+        scale: handleHoverState(1, 1.1),
       }}
       transition={{
         ease: "easeInOut",
         duration: animDuration,
+        delay: animationDelay,
         scale: {
           duration: animDuration,
+          delay: animationDelay,
         },
         y: {
           duration: animDuration * 3,
+          delay: animationDelay,
         },
         width: {
-          delay: animDuration * 5,
+          delay: animDuration * 5 + animationDelay,
           duration: animDuration * 1.5,
         },
         height: {
-          delay: animDuration * 3,
+          delay: animDuration * 3 + animationDelay,
           duration: animDuration * 1.5,
         },
       }}
@@ -110,12 +89,38 @@ const OptionButton = ({
             textAlign: "center",
             position: "absolute",
           }}
-          initial="hidden"
-          animate="visible"
-          variants={textVariants}
+          animate={{
+            y:
+              justRendered || !image
+                ? 0
+                : hovering
+                ? [`${textDropDistance}%`, "0%"]
+                : ["0%", `${textDropDistance}%`],
+            opacity: !image ? 1 : handleHoverState(0, 1),
+          }}
+          transition={{
+            duration: animDuration,
+          }}
         >
           {text}
         </motion.span>
+        {image && (
+          <motion.div
+            style={{
+              height: "60%",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            animate={{
+              opacity: handleHoverState(1, 0),
+            }}
+            transition={{
+              ease: "easeInOut",
+            }}
+          >
+            <Image src={image} alt="Button Image" boxSize="100%" />
+          </motion.div>
+        )}
       </Center>
     </motion.div>
   );

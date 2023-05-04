@@ -1,5 +1,6 @@
 import { Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import generatePopUpWords from "../helpers/generatePopUpWords";
 
 interface IPopUpPhrase {
   text: string;
@@ -19,9 +20,6 @@ interface IPopUpPhrase {
  * @returns
  */
 const PopUpPhrase = ({ text, size, maxWidth, durationTime }: IPopUpPhrase) => {
-  const splitWords = text.split(" ");
-  const words: any[] = [];
-
   const item = {
     hidden: {
       y: "200%",
@@ -31,15 +29,7 @@ const PopUpPhrase = ({ text, size, maxWidth, durationTime }: IPopUpPhrase) => {
       transition: { ease: "easeInOut", duration: durationTime },
     },
   };
-
-  for (const [, word] of splitWords.entries()) {
-    words.push(word.split(""));
-  }
-
-  // Add a space ("\u00A0") to the end of each word
-  words.map((word: string[]) => {
-    return word.push("\u00A0");
-  });
+  const words = generatePopUpWords(text);
 
   return (
     <Text maxWidth={`${maxWidth}px`} textAlign="center">
