@@ -24,7 +24,6 @@ interface IOptionButton {
  */
 const OptionButton = ({
   text,
-  image = null,
   width,
   height,
   fontSize = 16,
