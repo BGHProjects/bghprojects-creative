@@ -10,6 +10,7 @@ const App = () => {
       "Open Sans",
       'url("/assets/fonts/Electrolize/Electrolize-Regular.ttf")'
     );
+
     try {
       await font.load();
       document.fonts.add(font);

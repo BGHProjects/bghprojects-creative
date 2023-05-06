@@ -2,26 +2,51 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./App.tsx";
 import CustomCursor from "./components/CustomCursor.tsx";
-import "./index.css";
 import { AppStateContextProvider } from "./contexts/AppStateContext.tsx";
+import "./index.css";
 import GameDesign from "./pages/GameDesign.tsx";
+import Home from "./pages/Home.tsx";
+import LoadAssets from "./pages/LoadAssets.tsx";
+import {
+  gameDesignFonts,
+  gameDesignImages,
+} from "./consts/gameDesignAssets.ts";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <LoadAssets
+        PageToLoad={() => <Home />}
+        fonts={[
+          {
+            name: "Open Sans",
+            url: "/assets/fonts/Electrolize/Electrolize-Regular.ttf",
+          },
+        ]}
+      />
+    ),
   },
   {
     path: "/game-design",
-    element: <GameDesign />,
+    element: (
+      <LoadAssets
+        PageToLoad={() => <GameDesign />}
+        fonts={gameDesignFonts}
+        images={gameDesignImages}
+      />
+    ),
   },
 ]);
 
 const theme = extendTheme({
   fonts: {
     Electrolize: `Electrolize, sans-serif`,
+    Quicksand: `Quicksand, sans-serif`,
+    Exo2: `Exo2, sans-serif`,
+    Iceland: `Iceland, sans-serif`,
+    Lora: `Lora, sans-serif`,
   },
 });
 

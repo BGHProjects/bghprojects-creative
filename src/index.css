@@ -76,3 +76,31 @@ button:focus-visible {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("/assets/fonts/Quicksand/Quicksand-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2";
+  src: url("/assets/fonts/Exo_2/Exo2-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Iceland";
+  src: url("/assets/fonts/Iceland/Iceland-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/fonts/Lora/Lora-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

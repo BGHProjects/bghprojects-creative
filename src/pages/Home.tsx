@@ -1,5 +1,5 @@
 import { Center } from "@chakra-ui/react";
-import OptionButton from "../components/OptionButton";
+import HomePageButton from "../components/HomePageButton/HomePageButton";
 import PageContainer from "../components/PageContainer";
 import PopUpText from "../components/PopUpText";
 import ScreenAnimation from "../components/ScreenAnimation";
@@ -21,6 +21,7 @@ const Home = () => {
     height: buttonHeight,
     width: buttonWidth,
     fontSize: 24,
+    animDuration: 0.2,
   };
 
   const totalButtons = [1];
@@ -43,7 +44,7 @@ const Home = () => {
           maxH="800px"
         >
           {totalButtons.map((button, index) => (
-            <OptionButton
+            <HomePageButton
               {...{
                 ...optionButtonProps,
                 text: "Game Design",

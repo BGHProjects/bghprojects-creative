@@ -4,17 +4,15 @@ import { useAppContext } from "../contexts/AppStateContext";
 /**
  * Handles the relevant transition variables during
  * when navigating to another page
- *
- * @param pageName The name of the page being navigated to
  */
 const useHandleNavigation = () => {
   const navigate = useNavigate();
   const { screenTransitionDuration, setTransitioningScreens } = useAppContext();
 
-  const handleNavigate = (pageName: string) => {
+  const handleNavigate = <T extends string | number>(pageName: T) => {
     setTransitioningScreens(true);
     setTimeout(() => {
-      navigate(pageName);
+      navigate(pageName as number);
     }, screenTransitionDuration * 1000);
   };
 
