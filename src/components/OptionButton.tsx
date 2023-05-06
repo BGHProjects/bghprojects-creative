@@ -12,6 +12,7 @@ interface IOptionButton {
   height: number;
   fontSize?: number;
   animDelay?: number;
+  action: () => void;
 }
 
 /**
@@ -23,6 +24,7 @@ interface IOptionButton {
  * @param height The height of the button
  * @param fontSize The fontsize of the title of the button
  * @param animDelay The delay for the animations
+ * @param action The function that runs when the button is clicked
  */
 const OptionButton = ({
   text,
@@ -31,15 +33,18 @@ const OptionButton = ({
   fontSize = 16,
   animDelay = 0,
   image = null,
+  action,
 }: IOptionButton) => {
-  const { state, functions } = useOptionButton(animDelay);
+  const { state, functions } = useOptionButton(animDelay, action);
   const { justRendered, hovering, animationDelay } = state;
-  const { handleMouseEnter, handleMouseLeave, handleHoverState } = functions;
+  const { handleMouseEnter, handleMouseLeave, handleHoverState, handleClick } =
+    functions;
 
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
       style={{
         alignItems: "center",
         justifyContent: "center",

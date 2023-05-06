@@ -5,7 +5,7 @@ import { useAppContext } from "../../contexts/AppStateContext";
  * Hook that encapsulates the logic of the
  * Option Button component
  */
-const useOptionButton = (animDelay: number) => {
+const useOptionButton = (animDelay: number, action: () => void) => {
   const [justRendered, setjustRendered] = useState(true);
   const [hovering, setHovering] = useState(false);
   const [animationDelay, setAnimationDelay] = useState(animDelay);
@@ -22,6 +22,11 @@ const useOptionButton = (animDelay: number) => {
   const handleMouseLeave = () => {
     setHovering(false);
     setMouseHovering(false);
+  };
+
+  const handleClick = () => {
+    setMouseHovering(false);
+    action();
   };
 
   const handleHoverState = (baseState: any, animatedState: any) =>
@@ -41,6 +46,7 @@ const useOptionButton = (animDelay: number) => {
       handleMouseEnter,
       handleMouseLeave,
       handleHoverState,
+      handleClick,
     },
   };
 };

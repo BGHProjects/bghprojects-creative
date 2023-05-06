@@ -1,7 +1,10 @@
 import { Center } from "@chakra-ui/react";
+import OptionButton from "../components/OptionButton";
+import PageContainer from "../components/PageContainer";
 import PopUpText from "../components/PopUpText";
 import ScreenAnimation from "../components/ScreenAnimation";
-import OptionButton from "../components/OptionButton";
+import ScreenTransition from "../components/ScreenTransition";
+import useHandleNavigation from "../hooks/useHandleNavigation";
 
 const buttonHeight = 100;
 const buttonWidth = 250;
@@ -22,30 +25,38 @@ const Home = () => {
 
   const totalButtons = [1];
 
+  const { handleNavigate } = useHandleNavigation();
+
   return (
-    <Center w="100vw" h="100vh" bg="black" position="relative" flexDir="column">
-      <ScreenAnimation />
-      <PopUpText fullText={titleText} size={80} staggerTime={0.02} />
-      <Center
-        w={buttonWidth * buttonScale * totalButtons.length + containerPadding}
-        h={buttonHeight * buttonScale * totalButtons.length + containerPadding}
-        p={`${containerPadding}px`}
-        maxW="800px"
-        maxH="800px"
-      >
-        {totalButtons.map((button, index) => (
-          <OptionButton
-            {...{
-              ...optionButtonProps,
-              text: "Game Design",
-              image: "../../assets/images/controller.svg",
-              animDelay: 0.25 * index + 1,
-            }}
-            key={button.toString()}
-          />
-        ))}
-      </Center>
-    </Center>
+    <>
+      <ScreenTransition />
+      <PageContainer>
+        <ScreenAnimation />
+        <PopUpText fullText={titleText} size={80} staggerTime={0.02} />
+        <Center
+          w={buttonWidth * buttonScale * totalButtons.length + containerPadding}
+          h={
+            buttonHeight * buttonScale * totalButtons.length + containerPadding
+          }
+          p={`${containerPadding}px`}
+          maxW="800px"
+          maxH="800px"
+        >
+          {totalButtons.map((button, index) => (
+            <OptionButton
+              {...{
+                ...optionButtonProps,
+                text: "Game Design",
+                image: "../../assets/images/controller.svg",
+                animDelay: 0.25 * index + 1,
+                action: () => handleNavigate("/game-design"),
+              }}
+              key={button.toString()}
+            />
+          ))}
+        </Center>
+      </PageContainer>
+    </>
   );
 };
 

@@ -2,11 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../contexts/AppStateContext";
 
-const cursorSize = 30;
-const fullSize = `${cursorSize}px`;
-const halfSize = `${cursorSize / 2}px`;
-const toFullSize = [halfSize, fullSize];
-const toHalfSize = [fullSize, halfSize];
+const cursorSize = 20;
 
 /**
  * Custom cursor that is shown throughout the app
@@ -14,8 +10,6 @@ const toHalfSize = [fullSize, halfSize];
 const CustomCursor = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const { mouseHovering } = useAppContext();
-
-  const handleHover = mouseHovering ? toHalfSize : toFullSize;
 
   const handleMouseMove = (e: any) => {
     const { clientX, clientY } = e;
@@ -36,11 +30,11 @@ const CustomCursor = () => {
   return (
     <motion.div
       style={{
-        height: fullSize,
-        width: fullSize,
+        height: `${cursorSize}px`,
+        width: `${cursorSize}px`,
         background: "transparent",
         border: "2px solid white",
-        borderRadius: fullSize,
+        borderRadius: `${cursorSize}px`,
         position: "absolute",
         top: `${cursorPos.y}px`,
         left: `${cursorPos.x}px`,
@@ -48,8 +42,6 @@ const CustomCursor = () => {
       }}
       animate={{
         opacity: [0, 1],
-        height: handleHover,
-        width: handleHover,
         background: mouseHovering
           ? ["transparent", "white"]
           : ["white", "transparent"],

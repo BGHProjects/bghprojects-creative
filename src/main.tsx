@@ -5,8 +5,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import CustomCursor from "./components/CustomCursor.tsx";
 import "./index.css";
-import TestPage from "./pages/TestPage.tsx";
 import { AppStateContextProvider } from "./contexts/AppStateContext.tsx";
+import GameDesign from "./pages/GameDesign.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/test",
-    element: <TestPage />,
+    path: "/game-design",
+    element: <GameDesign />,
   },
 ]);
 
