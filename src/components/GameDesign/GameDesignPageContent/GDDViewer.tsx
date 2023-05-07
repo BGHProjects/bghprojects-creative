@@ -3,8 +3,8 @@ import { useState } from "react";
 
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import GDDPageButton from "./GDDPageButton";
 import { useGameDesignContext } from "../../../contexts/GameDesignContext";
+import GDDPageButton from "./GDDPageButton";
 
 /**
  * Component that renders a viewable Game Design Document
@@ -13,11 +13,12 @@ import { useGameDesignContext } from "../../../contexts/GameDesignContext";
 const GDDViewer = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+  const { gddPageNumber, setGDDPageNumber } = useGameDesignContext();
+
   const [numPages, setNumPages] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
   const [renderedPageNumber, setRenderedPageNumber] = useState(0);
 
-  const isLoading = renderedPageNumber !== pageNumber;
+  const isLoading = renderedPageNumber !== gddPageNumber;
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
@@ -40,7 +41,7 @@ const GDDViewer = () => {
               pageNumber={renderedPageNumber}
               width={500}
               renderTextLayer={false}
-              onRenderSuccess={() => setRenderedPageNumber(pageNumber)}
+              onRenderSuccess={() => setRenderedPageNumber(gddPageNumber)}
             />
           </Center>
           <Center
@@ -49,11 +50,11 @@ const GDDViewer = () => {
             boxSize="100%"
           >
             <Page
-              key={pageNumber}
-              pageNumber={pageNumber}
+              key={gddPageNumber}
+              pageNumber={gddPageNumber}
               width={500}
               renderTextLayer={false}
-              onRenderSuccess={() => setRenderedPageNumber(pageNumber)}
+              onRenderSuccess={() => setRenderedPageNumber(gddPageNumber)}
             />
           </Center>
         </Center>
@@ -63,16 +64,16 @@ const GDDViewer = () => {
         <GDDPageButton
           which="prev"
           action={() => {
-            setPageNumber(Math.max(1, pageNumber - 1));
+            setGDDPageNumber(Math.max(1, gddPageNumber - 1));
           }}
         />
         <Text color="white" fontFamily="Electrolize" fontSize="24">
-          {pageNumber} of {numPages}
+          {gddPageNumber} of {numPages}
         </Text>
         <GDDPageButton
           which="next"
           action={() => {
-            setPageNumber(Math.min(numPages, pageNumber + 1));
+            setGDDPageNumber(Math.min(numPages, gddPageNumber + 1));
           }}
         />
       </HStack>

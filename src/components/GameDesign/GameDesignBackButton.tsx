@@ -12,11 +12,12 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
  * to return the user to the Game Design page
  */
 const GameDesignBackButton = () => {
-  const { setGameDesignViewed } = useGameDesignContext();
+  const { setGameDesignViewed, setGDDPageNumber } = useGameDesignContext();
 
-  const { functions } = useAppButton(0, () =>
-    setGameDesignViewed(GameDesignViewed.None)
-  );
+  const { functions } = useAppButton(0, () => {
+    setGameDesignViewed(GameDesignViewed.None);
+    setGDDPageNumber(1);
+  });
   const { handleHoverState, handleMouseEnter, handleMouseLeave, handleClick } =
     functions;
 

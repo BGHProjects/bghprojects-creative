@@ -24,6 +24,8 @@ interface IGameDesignContext {
   setWhichGameDesign: Dispatch<
     SetStateAction<Omit<GameDesignViewed, GameDesignViewed.None>>
   >;
+  gddPageNumber: number;
+  setGDDPageNumber: Dispatch<SetStateAction<number>>;
 }
 
 const GameDesignContext = createContext<IGameDesignContext>(
@@ -43,6 +45,8 @@ const GameDesignContextProvider = ({
     Omit<GameDesignViewed, GameDesignViewed.None>
   >(GameDesignViewed.WorldEngine);
 
+  const [gddPageNumber, setGDDPageNumber] = useState(1);
+
   const viewingGame = gameDesignViewed !== GameDesignViewed.None;
 
   const transitionDuration = 1;
@@ -56,6 +60,8 @@ const GameDesignContextProvider = ({
         viewingGame,
         whichGameDesign,
         setWhichGameDesign,
+        gddPageNumber,
+        setGDDPageNumber,
       }}
     >
       {children}
