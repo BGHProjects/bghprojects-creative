@@ -20,6 +20,10 @@ interface IGameDesignContext {
   setGameDesignViewed: Dispatch<SetStateAction<GameDesignViewed>>;
   transitionDuration: number;
   viewingGame: boolean;
+  whichGameDesign: Omit<GameDesignViewed, GameDesignViewed.None>;
+  setWhichGameDesign: Dispatch<
+    SetStateAction<Omit<GameDesignViewed, GameDesignViewed.None>>
+  >;
 }
 
 const GameDesignContext = createContext<IGameDesignContext>(
@@ -35,6 +39,10 @@ const GameDesignContextProvider = ({
     GameDesignViewed.None
   );
 
+  const [whichGameDesign, setWhichGameDesign] = useState<
+    Omit<GameDesignViewed, GameDesignViewed.None>
+  >(GameDesignViewed.WorldEngine);
+
   const viewingGame = gameDesignViewed !== GameDesignViewed.None;
 
   const transitionDuration = 1;
@@ -46,6 +54,8 @@ const GameDesignContextProvider = ({
         setGameDesignViewed,
         transitionDuration,
         viewingGame,
+        whichGameDesign,
+        setWhichGameDesign,
       }}
     >
       {children}

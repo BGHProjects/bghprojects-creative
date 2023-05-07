@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import AppButton from "./AppButton";
 import { Center, Text, chakra } from "@chakra-ui/react";
+import { useGameDesignContext } from "../contexts/GameDesignContext";
 
 const animDelay = 1;
 
@@ -8,15 +9,19 @@ const animDelay = 1;
  * Button that opens the GDD of the selected Game
  * that is being viewed
  */
-const ViewGDDButton = ({ gdd }: { gdd: string }) => {
-  console.log("gdd", gdd);
+const ViewGDDButton = () => {
+  const { gameDesignViewed } = useGameDesignContext();
+
+  const handleOpenGDD = () => {
+    window.open(`/assets/gdds/${gameDesignViewed}.pdf`);
+  };
 
   return (
     <AppButton
       width={200}
       height={80}
       animDuration={0.2}
-      action={() => {}}
+      action={handleOpenGDD}
       animDelay={animDelay}
     >
       <motion.div

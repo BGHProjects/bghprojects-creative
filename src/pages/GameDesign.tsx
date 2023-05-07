@@ -29,7 +29,7 @@ const options = [
   },
 
   {
-    image: "MMBG",
+    image: "GoGetEm",
     text: "GoGetEm",
     fontFamily: "Quicksand",
     gameDesign: GameDesignViewed.GoGetEm,
@@ -47,11 +47,16 @@ const options = [
  * aspect of the portfolio
  */
 const GameDesign = () => {
-  const { setGameDesignViewed, transitionDuration, viewingGame } =
-    useGameDesignContext();
+  const {
+    setWhichGameDesign,
+    transitionDuration,
+    viewingGame,
+    setGameDesignViewed,
+  } = useGameDesignContext();
 
   const handleSetGameDesignViewed = (gameOption: GameDesignViewed) => {
     setGameDesignViewed(gameOption);
+    setWhichGameDesign(gameOption);
   };
 
   return (
