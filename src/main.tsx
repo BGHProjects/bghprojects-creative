@@ -12,6 +12,7 @@ import {
   gameDesignFonts,
   gameDesignImages,
 } from "./consts/gameDesignAssets.ts";
+import { GameDesignContextProvider } from "./contexts/GameDesignContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
     path: "/game-design",
     element: (
       <LoadAssets
-        PageToLoad={() => <GameDesign />}
+        PageToLoad={() => (
+          <GameDesignContextProvider>
+            <GameDesign />
+          </GameDesignContextProvider>
+        )}
         fonts={gameDesignFonts}
         images={gameDesignImages}
       />

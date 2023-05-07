@@ -8,7 +8,7 @@ interface ILoadAssets {
 }
 
 const LoadAssets = ({ PageToLoad, fonts, images }: ILoadAssets) => {
-  const [isFontLoaded, setIsFontLoaded] = useState(false);
+  const [areAssetsLoaded, setAreAssetsLoaded] = useState(false);
 
   const checkLoadAssets = async (
     fonts: { name: string; url: string }[] | undefined,
@@ -23,7 +23,6 @@ const LoadAssets = ({ PageToLoad, fonts, images }: ILoadAssets) => {
             document.fonts.add(fontFace);
           }
         );
-
         await Promise.all([...fontPromises]);
       }
 
@@ -40,7 +39,7 @@ const LoadAssets = ({ PageToLoad, fonts, images }: ILoadAssets) => {
         await Promise.all([...imagePromises]);
       }
 
-      setIsFontLoaded(true);
+      setAreAssetsLoaded(true);
     } catch (error) {
       console.log(error);
     }
@@ -50,7 +49,7 @@ const LoadAssets = ({ PageToLoad, fonts, images }: ILoadAssets) => {
     checkLoadAssets(fonts, images);
   }, []);
 
-  return isFontLoaded ? <PageToLoad /> : <LoadingPage />;
+  return areAssetsLoaded ? <PageToLoad /> : <LoadingPage />;
 };
 
 export default LoadAssets;

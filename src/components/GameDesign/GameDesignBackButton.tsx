@@ -1,0 +1,51 @@
+import { motion } from "framer-motion";
+import {
+  GameDesignViewed,
+  useGameDesignContext,
+} from "../../contexts/GameDesignContext";
+import useAppButton from "../../hooks/componentHooks/useAppButton";
+import { Center, Text } from "@chakra-ui/react";
+import { ArrowBackIcon } from "@chakra-ui/icons";
+
+/**
+ * Button that unselected the Game Design currently viewed
+ * to return the user to the Game Design page
+ */
+const GameDesignBackButton = () => {
+  const { setGameDesignViewed } = useGameDesignContext();
+
+  const { functions } = useAppButton(0, () =>
+    setGameDesignViewed(GameDesignViewed.None)
+  );
+  const { handleHoverState, handleMouseEnter, handleMouseLeave, handleClick } =
+    functions;
+
+  return (
+    <motion.div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+      style={{
+        zIndex: 2,
+        alignSelf: "flex-start",
+        marginBottom: "40px",
+      }}
+      animate={{
+        opacity: [0, 1],
+        scale: handleHoverState(1, 1.1),
+      }}
+      transition={{
+        ease: "easeInOut",
+      }}
+    >
+      <Center boxSize="100%">
+        <ArrowBackIcon color="white" boxSize={7} mr="10px" />
+        <Text color="white" fontFamily="Electrolize">
+          Back to Game Design
+        </Text>
+      </Center>
+    </motion.div>
+  );
+};
+
+export default GameDesignBackButton;
