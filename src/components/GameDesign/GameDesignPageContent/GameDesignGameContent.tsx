@@ -57,7 +57,7 @@ const GameDesignGameContent = () => {
       <Flex
         boxSize="100%"
         position="absolute"
-        bg="rgba(0,0,0,0.5)"
+        bg="rgba(0,0,0,0.8)"
         flexDir="column"
         alignItems="center"
         pt="40px"
