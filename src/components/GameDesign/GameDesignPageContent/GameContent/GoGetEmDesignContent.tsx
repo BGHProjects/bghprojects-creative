@@ -1,38 +1,23 @@
 import { HStack, VStack, Image, Text } from "@chakra-ui/react";
 
 const GoGetEmDesignContent = () => {
+  const imagePaths = [
+    "/assets/images/game-design/gogetem/ClassicMenu.jpg",
+    "/assets/images/game-design/gogetem/LiquidSwipe.jpg",
+    "/assets/images/game-design/gogetem/ClassicGameplay.jpg",
+    "/assets/images/game-design/gogetem/HuntGameplay.jpg",
+    "/assets/images/game-design/gogetem/ChasedownGameplay.jpg",
+    "/assets/images/game-design/gogetem/TagTeamGameplay.jpg",
+  ];
+
   return (
     <VStack>
-      <HStack justifyContent="center" mt="40px" w="100%">
-        <Image
-          src="/assets/images/game-design/gogetem/ClassicMenu.jpg"
-          width="40%"
-        />
-        <Image
-          src="/assets/images/game-design/gogetem/LiquidSwipe.jpg"
-          width="40%"
-        />
-      </HStack>
-      <HStack justifyContent="center">
-        <Image
-          src="/assets/images/game-design/gogetem/ClassicGameplay.jpg"
-          width="40%"
-        />
-        <Image
-          src="/assets/images/game-design/gogetem/HuntGameplay.jpg"
-          width="40%"
-        />
-      </HStack>
-      <HStack justifyContent="center">
-        <Image
-          src="/assets/images/game-design/gogetem/ChasedownGameplay.jpg"
-          width="40%"
-        />
-        <Image
-          src="/assets/images/game-design/gogetem/TagTeamGameplay.jpg"
-          width="40%"
-        />
-      </HStack>
+      {[0, 2, 4].map((i) => (
+        <HStack key={i} justifyContent="center" mt="40px" w="100%">
+          <Image src={imagePaths[i]} width="40%" />
+          <Image src={imagePaths[i + 1]} width="40%" />
+        </HStack>
+      ))}
     </VStack>
   );
 };

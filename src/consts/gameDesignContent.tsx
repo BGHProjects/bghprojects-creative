@@ -6,6 +6,14 @@ import {
   GoGetEmDesignContent,
   GoGetEmTextContent,
 } from "../components/GameDesign/GameDesignPageContent/GameContent/GoGetEmDesignContent";
+import {
+  MetaRangersDesignContent,
+  MetaRangersTextContent,
+} from "../components/GameDesign/GameDesignPageContent/GameContent/MetaRangersContent";
+import {
+  WorldEngineDesignContent,
+  WorldEngineTextContent,
+} from "../components/GameDesign/GameDesignPageContent/GameContent/WorldEngineContent";
 import { GameDesignViewed } from "../contexts/GameDesignContext";
 
 export const content: Record<string, any> = {
@@ -19,9 +27,9 @@ export const content: Record<string, any> = {
   [GameDesignViewed.MetaRangers]: {
     title: "METARANGERS",
     fontFamily: "Iceland",
-    textIntro: "Intro goes here",
+    textIntro: <MetaRangersTextContent />,
     contentTitle: "Gameplay Footage",
-    content: <></>,
+    content: <MetaRangersDesignContent />,
   },
   [GameDesignViewed.GoGetEm]: {
     title: "GoGetEm",
@@ -33,8 +41,8 @@ export const content: Record<string, any> = {
   [GameDesignViewed.WorldEngine]: {
     title: "World Engine",
     fontFamily: "Exo2",
-    textIntro: "Intro goes here",
+    textIntro: <WorldEngineTextContent />,
     contentTitle: "Gameplay Footage",
-    content: <></>,
+    content: <WorldEngineDesignContent />,
   },
 };
