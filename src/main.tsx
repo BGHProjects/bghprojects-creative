@@ -13,21 +13,12 @@ import {
   gameDesignImages,
 } from "./consts/gameDesignAssets.ts";
 import { GameDesignContextProvider } from "./contexts/GameDesignContext.tsx";
+import ConceptArt from "./pages/ConceptArt.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <LoadAssets
-        PageToLoad={() => <Home />}
-        fonts={[
-          {
-            name: "Open Sans",
-            url: "/assets/fonts/Electrolize/Electrolize-Regular.ttf",
-          },
-        ]}
-      />
-    ),
+    element: <LoadAssets PageToLoad={() => <Home />} fonts={gameDesignFonts} />,
   },
   {
     path: "/game-design",
@@ -41,6 +32,12 @@ const router = createBrowserRouter([
         fonts={gameDesignFonts}
         images={gameDesignImages}
       />
+    ),
+  },
+  {
+    path: "/concept-art",
+    element: (
+      <LoadAssets PageToLoad={() => <ConceptArt />} fonts={gameDesignFonts} />
     ),
   },
 ]);

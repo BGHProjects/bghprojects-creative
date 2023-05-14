@@ -63,7 +63,6 @@ const GameDesign = () => {
     <>
       <ScreenTransition />
       <BackButton animDelay={options.length * animDelay + 1} />
-      <ScreenTransition />
       <PageContainer>
         <ScreenAnimation />
         <motion.div
