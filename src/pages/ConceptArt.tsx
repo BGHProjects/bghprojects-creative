@@ -8,12 +8,14 @@ import ScreenTransition from "../components/ScreenTransition";
 import { useState } from "react";
 import ElectricGuitarContent from "../components/ConceptArt/ElectricGuitarContent";
 import ConceptArtBackButton from "../components/ConceptArt/ConceptArtBackButton";
+import SwordsContent from "../components/ConceptArt/SwordsContent";
 
 const animDelay = 0.33;
 
 export enum Concept {
   None = "None",
   ElectricGuitar = "ElectricGuitar",
+  Swords = "Swords",
 }
 
 /**
@@ -39,6 +41,11 @@ const ConceptArt = () => {
       text: "Electric Guitars",
       image: "electric-guitar.svg",
       action: () => handleSelectingConcept(Concept.ElectricGuitar),
+    },
+    {
+      text: "Swords",
+      image: "sword-icon.svg",
+      action: () => handleSelectingConcept(Concept.Swords),
     },
   ];
 
@@ -76,6 +83,9 @@ const ConceptArt = () => {
         </Center>
         {conceptSelected === Concept.ElectricGuitar && (
           <ElectricGuitarContent concept={conceptSelected} />
+        )}
+        {conceptSelected === Concept.Swords && (
+          <SwordsContent concept={conceptSelected} />
         )}
         {conceptSelected !== Concept.None && (
           <ConceptArtBackButton
