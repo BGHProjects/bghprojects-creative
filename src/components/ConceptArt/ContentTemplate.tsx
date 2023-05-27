@@ -11,43 +11,43 @@ import {
 import { motion } from "framer-motion";
 import { Concept } from "../../pages/ConceptArt";
 import DisplayImageRow from "../DisplayImageRow";
+import { useEffect, useRef, useState } from "react";
 
 const transitionDuration = 1;
 
-interface ISwordsContent {
-  concept: Concept;
+interface IContentTemplate {
+  conceptChosen: Concept;
+  thisConcept: Concept;
+  contentDetails: any[];
+  initialImages: string[];
+  contentTitle: string;
+  initialRender: boolean;
 }
 
-const SwordsContent = ({ concept }: ISwordsContent) => {
-  const viewing = concept === Concept.Swords;
+/**
+ * Component that renders the content of the selected Concept Art Section
+ * @param conceptChosen The concept that the user has chosen from the Concept Art menu
+ * @param thisConcept The concept of this instantiated ContentTemplate
+ * @param contentDetails What is displayed on this page
+ * @param initialImages The initial images that this section is based off of
+ * @param contentTitle The title of the section
+ * @param initialRender Whether or not this component is in its initial render
+ */
+const ContentTemplate = ({
+  conceptChosen,
+  thisConcept,
+  contentDetails,
+  initialImages,
+  contentTitle,
+  initialRender,
+}: IContentTemplate) => {
+  const [viewing, setViewing] = useState(false);
 
-  const contentDetails = [
-    {
-      imagePath: "concept-art/swords/row1/Sword Row 1 - Variant",
-      noOfItems: 4,
-      height: "70%",
-    },
-    {
-      imagePath: "concept-art/swords/row2/Sword Row 2 - Variant",
-      noOfItems: 5,
-      height: "70%",
-    },
-    {
-      imagePath: "concept-art/swords/row3/Sword Row 3 - Variant",
-      noOfItems: 5,
-      height: "70%",
-    },
-    {
-      imagePath: "concept-art/swords/row4/Sword Row 4 - Variant",
-      noOfItems: 4,
-      height: "70%",
-    },
-    {
-      imagePath: "concept-art/swords/row5/Sword Row 5 - Variant",
-      noOfItems: 4,
-      height: "70%",
-    },
-  ];
+  const thisRef = useRef();
+
+  useEffect(() => {
+    setViewing(conceptChosen === thisConcept);
+  }, [conceptChosen]);
 
   const contentActual = () =>
     contentDetails.map((detail) => <DisplayImageRow {...detail} />);
@@ -58,14 +58,13 @@ const SwordsContent = ({ concept }: ISwordsContent) => {
         Initial Designs
       </Text>
       <HStack justifyContent="center" mt="0px" w="100%">
-        <Image
-          src="/assets/images/concept-art/swords/initial-1.svg"
-          width="40%"
-        />
-        <Image
-          src="/assets/images/concept-art/swords/initial-2.svg"
-          width="40%"
-        />
+        {initialImages.map((image) => (
+          <Image
+            key={image}
+            src={`/assets/images/concept-art/${image}`}
+            width="40%"
+          />
+        ))}
       </HStack>
     </VStack>,
     ...contentActual(),
@@ -73,10 +72,10 @@ const SwordsContent = ({ concept }: ISwordsContent) => {
 
   return (
     <motion.div
+      ref={thisRef as any}
       style={{
         height: "100vh",
         width: "100vw",
-        display: "none",
         position: "absolute",
         top: "0%",
         opacity: 0,
@@ -84,19 +83,18 @@ const SwordsContent = ({ concept }: ISwordsContent) => {
         flexDirection: "column",
       }}
       animate={{
-        opacity: viewing ? [0, 1] : [1, 0],
+        opacity: initialRender ? 0 : viewing ? [0, 1] : 0,
         display: viewing ? "flex" : "none",
       }}
       transition={{
         ease: "easeInOut",
         display: {
-          delay: viewing ? 0 : transitionDuration,
+          delay: transitionDuration,
         },
         height: {
           delay: transitionDuration,
           duration: transitionDuration,
         },
-        delay: viewing ? transitionDuration : 0,
         duration: transitionDuration,
       }}
     >
@@ -121,7 +119,7 @@ const SwordsContent = ({ concept }: ISwordsContent) => {
         }}
       >
         <AbsoluteContent top="40px">
-          <AppFont fontSize="36">Swords</AppFont>
+          <AppFont fontSize="36">{contentTitle}</AppFont>
         </AbsoluteContent>
 
         <AbsoluteContent top="85%" flexDir="column">
@@ -163,4 +161,4 @@ const AbsoluteContent = chakra(Center, {
   },
 });
 
-export default SwordsContent;
+export default ContentTemplate;

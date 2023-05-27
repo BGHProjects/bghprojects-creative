@@ -1,15 +1,15 @@
 import { Center, Grid, GridItem } from "@chakra-ui/react";
+import { useState } from "react";
 import BackButton from "../components/BackButton";
+import ConceptArtBackButton from "../components/ConceptArt/ConceptArtBackButton";
+import ContentTemplate from "../components/ConceptArt/ContentTemplate";
 import HomePageButton from "../components/HomePageButton/HomePageButton";
 import PageContainer from "../components/PageContainer";
 import PopUpText from "../components/PopUpText";
 import ScreenAnimation from "../components/ScreenAnimation";
 import ScreenTransition from "../components/ScreenTransition";
-import { useState } from "react";
-import ElectricGuitarContent from "../components/ConceptArt/ElectricGuitarContent";
-import ConceptArtBackButton from "../components/ConceptArt/ConceptArtBackButton";
-import SwordsContent from "../components/ConceptArt/SwordsContent";
-import ThanosSignatureShoeContent from "../components/ConceptArt/ThanosSignatureShoeContent";
+import electricGuitar from "../consts/conceptArtContent/electricGuitar";
+import swords from "../consts/conceptArtContent/swords";
 
 const animDelay = 0.33;
 
@@ -26,9 +26,12 @@ export enum Concept {
  */
 const ConceptArt = () => {
   const [conceptSelected, setConceptSelected] = useState(Concept.None);
+  const [initialRender, setInitialRender] = useState(true);
 
-  const handleSelectingConcept = (concept: Concept) =>
+  const handleSelectingConcept = (concept: Concept) => {
+    setInitialRender(false);
     setConceptSelected(concept);
+  };
 
   const optionButtonProps = {
     height: 120,
@@ -55,12 +58,51 @@ const ConceptArt = () => {
     },
   ];
 
+  const commonContents = {
+    initialRender,
+    conceptChosen: conceptSelected,
+  };
+
+  const electricGuitarContents = {
+    contentDetails: electricGuitar,
+    thisConcept: Concept.ElectricGuitar,
+    initialImages: [
+      "electric-guitars/initial-1.svg",
+      "electric-guitars/initial-2.svg",
+    ],
+    contentTitle: "Electric Guitars",
+    ...commonContents,
+  };
+
+  const swordsContents = {
+    contentDetails: swords,
+    thisConcept: Concept.Swords,
+    initialImages: ["swords/initial-1.svg", "swords/initial-2.svg"],
+    contentTitle: "Swords",
+    ...commonContents,
+  };
+
+  const thanosSignatureShoeContents = {
+    contentDetails: [],
+    thisConcept: Concept.ThanosSignatureShoe,
+    initialImages: ["thanos-signature-shoe/initial-1.png"],
+    contentTitle: "Thanos Signature Shoe (In Progress)",
+    ...commonContents,
+  };
+
+  const conceptsContents = [
+    electricGuitarContents,
+    swordsContents,
+    thanosSignatureShoeContents,
+  ];
+
   return (
     <>
       <ScreenTransition />
       <BackButton animDelay={buttons.length * animDelay + 1} />
       <PageContainer>
         <ScreenAnimation />
+
         <Center flexDir="column" boxSize="100%">
           <PopUpText fullText={["Concept Art"]} size={60} staggerTime={0.02} />
           <Grid
@@ -87,15 +129,9 @@ const ConceptArt = () => {
             ))}
           </Grid>
         </Center>
-        {conceptSelected === Concept.ElectricGuitar && (
-          <ElectricGuitarContent concept={conceptSelected} />
-        )}
-        {conceptSelected === Concept.Swords && (
-          <SwordsContent concept={conceptSelected} />
-        )}
-        {conceptSelected === Concept.ThanosSignatureShoe && (
-          <ThanosSignatureShoeContent concept={conceptSelected} />
-        )}
+        {conceptsContents.map((content) => (
+          <ContentTemplate {...content} key={JSON.stringify(content)} />
+        ))}
         {conceptSelected !== Concept.None && (
           <ConceptArtBackButton
             action={() => handleSelectingConcept(Concept.None)}

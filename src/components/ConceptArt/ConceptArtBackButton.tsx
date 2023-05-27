@@ -35,7 +35,9 @@ const ConceptArtBackButton = ({ action }: IConceptArtBackButton) => {
       }}
       transition={{
         ease: "easeInOut",
-        delay: 1,
+        opacity: {
+          delay: 1,
+        },
       }}
     >
       <Center boxSize="100%">
