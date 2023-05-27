@@ -9,6 +9,7 @@ import { useState } from "react";
 import ElectricGuitarContent from "../components/ConceptArt/ElectricGuitarContent";
 import ConceptArtBackButton from "../components/ConceptArt/ConceptArtBackButton";
 import SwordsContent from "../components/ConceptArt/SwordsContent";
+import ThanosSignatureShoeContent from "../components/ConceptArt/ThanosSignatureShoeContent";
 
 const animDelay = 0.33;
 
@@ -16,6 +17,7 @@ export enum Concept {
   None = "None",
   ElectricGuitar = "ElectricGuitar",
   Swords = "Swords",
+  ThanosSignatureShoe = "ThanosSignatureShoe",
 }
 
 /**
@@ -25,9 +27,8 @@ export enum Concept {
 const ConceptArt = () => {
   const [conceptSelected, setConceptSelected] = useState(Concept.None);
 
-  const handleSelectingConcept = (concept: Concept) => {
+  const handleSelectingConcept = (concept: Concept) =>
     setConceptSelected(concept);
-  };
 
   const optionButtonProps = {
     height: 120,
@@ -46,6 +47,11 @@ const ConceptArt = () => {
       text: "Swords",
       image: "sword-icon.svg",
       action: () => handleSelectingConcept(Concept.Swords),
+    },
+    {
+      text: "Thanos Signature Shoe",
+      image: "thanos-shoe.svg",
+      action: () => handleSelectingConcept(Concept.ThanosSignatureShoe),
     },
   ];
 
@@ -86,6 +92,9 @@ const ConceptArt = () => {
         )}
         {conceptSelected === Concept.Swords && (
           <SwordsContent concept={conceptSelected} />
+        )}
+        {conceptSelected === Concept.ThanosSignatureShoe && (
+          <ThanosSignatureShoeContent concept={conceptSelected} />
         )}
         {conceptSelected !== Concept.None && (
           <ConceptArtBackButton
