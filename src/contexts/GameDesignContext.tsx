@@ -26,6 +26,7 @@ interface IGameDesignContext {
   >;
   gddPageNumber: number;
   setGDDPageNumber: Dispatch<SetStateAction<number>>;
+  whichImages: Record<string, any[]>;
 }
 
 const GameDesignContext = createContext<IGameDesignContext>(
@@ -51,6 +52,40 @@ const GameDesignContextProvider = ({
 
   const transitionDuration = 1;
 
+  const framGDDImages: any[] = [
+    "Title Page.png",
+    "Contents.png",
+    "Executive Summary.png",
+    "Game Overview 1.png",
+    "Game Overview 2.png",
+    "Game Overview 3.png",
+    "Game Overview 4.png",
+    "Game Overview 5.png",
+    "Game Overview 6.png",
+    "Game Overview 7.png",
+    "Game Overview 8.png",
+    "Game Overview 9.png",
+    "Game Overview 10.png",
+    "Game Overview 11.png",
+    "Game Overview 12.png",
+    "Web3 1.png",
+    "Web3 2.png",
+    "Web3 3.png",
+    "Web3 4.png",
+    "Web3 5.png",
+  ];
+
+  const goGetEmGDDImages: any[] = [];
+  const worldEngineGDDImages: any[] = [];
+  const metarangersGDDImages: any[] = [];
+
+  const whichImages = {
+    [GameDesignViewed.GoGetEm]: goGetEmGDDImages,
+    [GameDesignViewed.WorldEngine]: worldEngineGDDImages,
+    [GameDesignViewed.MetaRangers]: metarangersGDDImages,
+    [GameDesignViewed.Fram]: framGDDImages,
+  };
+
   return (
     <GameDesignContext.Provider
       value={{
@@ -62,6 +97,7 @@ const GameDesignContextProvider = ({
         setWhichGameDesign,
         gddPageNumber,
         setGDDPageNumber,
+        whichImages,
       }}
     >
       {children}

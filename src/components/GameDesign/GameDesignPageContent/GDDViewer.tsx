@@ -1,41 +1,31 @@
-import { Center, Flex, HStack, Text, chakra } from "@chakra-ui/react";
-import { useState } from "react";
-
-import { Document, Page, pdfjs } from "react-pdf";
+import { Center, Flex, HStack, Text, chakra, Image } from "@chakra-ui/react";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { useGameDesignContext } from "../../../contexts/GameDesignContext";
 import GDDPageButton from "./GDDPageButton";
+import { lowerCase } from "lodash";
 
 /**
  * Component that renders a viewable Game Design Document
  * in the selected Game Design game's section
  */
 const GDDViewer = () => {
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  const { gddPageNumber, setGDDPageNumber, whichGameDesign, whichImages } =
+    useGameDesignContext();
 
-  const { gddPageNumber, setGDDPageNumber } = useGameDesignContext();
-
-  const [numPages, setNumPages] = useState(0);
-  const [renderedPageNumber, setRenderedPageNumber] = useState(0);
-
-  const isLoading = renderedPageNumber !== gddPageNumber;
-
-  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-    setNumPages(numPages);
-  };
-
-  const { whichGameDesign } = useGameDesignContext();
+  const images = whichImages[whichGameDesign as string];
 
   return (
     <ContentContainer>
       <BackgroundBlur />
-      <Document
-        file={`/assets/gdds/${whichGameDesign}.pdf`}
-        onLoadError={(err) => console.log(err)}
-        onLoadSuccess={onDocumentLoadSuccess as any}
-      >
-        <Center position="relative" h="700px" w="500px">
-          <Center position="absolute" boxSize="100%">
+      <Center position="relative" h="700px" w="500px">
+        <Center position="absolute" boxSize="100%">
+          <Image
+            src={`/assets/images/game-design/gdds/${lowerCase(
+              whichGameDesign as string
+            )}/${images[gddPageNumber - 1]}`}
+          />
+        </Center>
+        {/* <Center position="absolute" boxSize="100%">
             <Page
               key={renderedPageNumber}
               pageNumber={renderedPageNumber}
@@ -56,9 +46,8 @@ const GDDViewer = () => {
               renderTextLayer={false}
               onRenderSuccess={() => setRenderedPageNumber(gddPageNumber)}
             />
-          </Center>
-        </Center>
-      </Document>
+          </Center> */}
+      </Center>
 
       <HStack w="60%" justifyContent={"space-evenly"} mt="20px">
         <GDDPageButton
@@ -68,12 +57,12 @@ const GDDViewer = () => {
           }}
         />
         <Text color="white" fontFamily="Electrolize" fontSize="24">
-          {gddPageNumber} of {numPages}
+          {gddPageNumber} of {images.length}
         </Text>
         <GDDPageButton
           which="next"
           action={() => {
-            setGDDPageNumber(Math.min(numPages, gddPageNumber + 1));
+            setGDDPageNumber(Math.min(images.length, gddPageNumber + 1));
           }}
         />
       </HStack>
