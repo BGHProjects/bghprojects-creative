@@ -13,6 +13,7 @@ enum GameDesignViewed {
   MetaRangers = "MetaRangers",
   WorldEngine = "WorldEngine",
   GoGetEm = "GoGetEm",
+  FabulaExMachina = "FabulaExMachina",
 }
 
 interface IGameDesignContext {
@@ -141,11 +142,22 @@ const GameDesignContextProvider = ({
     "Web3 2.png",
   ];
 
+  const fabulaExMachinaGDDImages: any[] = [
+    "Title Page.png",
+    "Contents Page.png",
+    "Executive Summary.png",
+    "Design Philosophy.png",
+    "Gameplay.png",
+    "Prompt Engineering 1.png",
+    "Prompt Engineering 2.png",
+  ];
+
   const whichImages = {
     [GameDesignViewed.GoGetEm]: goGetEmGDDImages,
     [GameDesignViewed.WorldEngine]: worldEngineGDDImages,
     [GameDesignViewed.MetaRangers]: metarangersGDDImages,
     [GameDesignViewed.Fram]: framGDDImages,
+    [GameDesignViewed.FabulaExMachina]: fabulaExMachinaGDDImages,
   };
 
   return (

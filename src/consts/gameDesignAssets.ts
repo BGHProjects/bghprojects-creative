@@ -19,6 +19,10 @@ const gameDesignFonts = [
     name: "Open Sans",
     url: "/assets/fonts/Quicksand/Quicksand-SemiBold.ttf",
   },
+  {
+    name: "Open Sans",
+    url: "/assets/fonts/Varela_Round/VarelaRound-Regular.ttf",
+  },
 ];
 
 const gameDesignImages = [
@@ -26,6 +30,7 @@ const gameDesignImages = [
   "/assets/images/game-design/backgrounds/MetaRangers.png",
   "/assets/images/game-design/backgrounds/WorldEngine.png",
   "/assets/images/game-design/backgrounds/MMBG.png",
+  "/assets/images/game-design/backgrounds/FabulaExMachina.png",
 ];
 
 export { gameDesignFonts, gameDesignImages };

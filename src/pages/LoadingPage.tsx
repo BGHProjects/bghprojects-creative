@@ -2,7 +2,7 @@ import { Center, Spinner, VStack } from "@chakra-ui/react";
 
 const LoadingPage = () => {
   return (
-    <Center w="100vw" h="100vh" bg="black" position="relative">
+    <Center w="100vw" h="100vh" bg="black" position="absolute">
       <VStack>
         <Spinner color="white" size="xl" />
       </VStack>

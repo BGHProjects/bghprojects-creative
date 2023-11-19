@@ -49,6 +49,7 @@ const theme = extendTheme({
     Exo2: `Exo2, sans-serif`,
     Iceland: `Iceland, sans-serif`,
     Lora: `Lora, sans-serif`,
+    Varela: `Varela, sans-serif`,
   },
 });
 

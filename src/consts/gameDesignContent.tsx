@@ -14,6 +14,10 @@ import {
   WorldEngineDesignContent,
   WorldEngineTextContent,
 } from "../components/GameDesign/GameDesignPageContent/GameContent/WorldEngineContent";
+import {
+  FabulaExMachinaTextContent,
+  FabulaExMachinaDesignContent,
+} from "../components/GameDesign/GameDesignPageContent/GameContent/FabulaExMachinaContent";
 import { GameDesignViewed } from "../contexts/GameDesignContext";
 
 export const content: Record<string, any> = {
@@ -44,5 +48,12 @@ export const content: Record<string, any> = {
     textIntro: <WorldEngineTextContent />,
     contentTitle: "Gameplay Footage",
     content: <WorldEngineDesignContent />,
+  },
+  [GameDesignViewed.FabulaExMachina]: {
+    title: "Fabula Ex Machina",
+    fontFamily: "Varela",
+    textIntro: <FabulaExMachinaTextContent />,
+    contentTitle: "Gameplay Footage",
+    content: <FabulaExMachinaDesignContent />,
   },
 };

@@ -40,6 +40,12 @@ const options = [
     fontFamily: "Lora",
     gameDesign: GameDesignViewed.Fram,
   },
+  {
+    image: "FabulaExMachina",
+    text: "Fabula Ex Machina",
+    fontFamily: "Varela",
+    gameDesign: GameDesignViewed.FabulaExMachina,
+  },
 ];
 
 /**
