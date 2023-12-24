@@ -35,6 +35,11 @@ const Home = () => {
       image: "concept-art-logo.svg",
       action: () => handleNavigate("/concept-art"),
     },
+    {
+      text: "Graphic Design",
+      image: "graphic-design-logo.svg",
+      action: () => handleNavigate("/graphic-design"),
+    },
   ];
 
   const { handleNavigate } = useHandleNavigation();

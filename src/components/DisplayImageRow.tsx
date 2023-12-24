@@ -1,4 +1,4 @@
-import { HStack, Image } from "@chakra-ui/react";
+import { HStack, Image, Spinner } from "@chakra-ui/react";
 import { range } from "lodash";
 
 interface IDisplayImageRow {
@@ -30,6 +30,7 @@ const DisplayImageRow = ({
           src={`/assets/images/${imagePath} ${index + 1}.svg`}
           width={width}
           height={height}
+          fallback={<Spinner size="xl" color="white" />}
         />
       ))}
     </HStack>

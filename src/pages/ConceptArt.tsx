@@ -120,7 +120,6 @@ const ConceptArt = () => {
                       text: button.text,
                       image: `/assets/images/${button.image}`,
                       animDelay: 0.25 * index + 1,
-
                       action: button.action,
                     }}
                   />

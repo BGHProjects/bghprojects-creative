@@ -4,6 +4,7 @@ import {
   Flex,
   HStack,
   Image,
+  Spinner,
   Text,
   VStack,
   chakra,
@@ -63,6 +64,7 @@ const ContentTemplate = ({
             key={image}
             src={`/assets/images/concept-art/${image}`}
             width="40%"
+            fallback={<Spinner size="xl" color="white" />}
           />
         ))}
       </HStack>

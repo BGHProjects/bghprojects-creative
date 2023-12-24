@@ -88,17 +88,36 @@ const GameDesign = () => {
             },
           }}
         >
-          <Center flexDir="column" boxSize="100%">
-            <PopUpText
-              fullText={["Game Design"]}
-              size={60}
-              staggerTime={0.02}
-            />
+          <Center flexDir="column" boxSize="100%" zIndex={1}>
+            <Center w="100%" h="40%">
+              <PopUpText
+                fullText={["Game Design"]}
+                size={60}
+                staggerTime={0.02}
+              />
+            </Center>
+
             <Grid
               templateColumns={"repeat(2,1fr)"}
               templateRows={"repeat(2,1fr)"}
               gap={10}
+              p="20px"
               mt="40px"
+              maxH="60%"
+              overflowY="auto"
+              sx={{
+                "&::-webkit-scrollbar": {
+                  w: "1",
+                  mr: "10",
+                },
+                "&::-webkit-scrollbar-track": {
+                  w: "6",
+                },
+                "&::-webkit-scrollbar-thumb": {
+                  borderRadius: "10",
+                  bg: "white",
+                },
+              }}
             >
               {options.map((option, index) => (
                 <GridItem key={JSON.stringify(option)} w="440px" h="220px">

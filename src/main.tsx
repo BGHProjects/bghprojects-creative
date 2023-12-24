@@ -14,6 +14,8 @@ import {
 } from "./consts/gameDesignAssets.ts";
 import { GameDesignContextProvider } from "./contexts/GameDesignContext.tsx";
 import ConceptArt from "./pages/ConceptArt.tsx";
+import GraphicDesign from "./pages/GraphicDesign.tsx";
+import { GraphicDesignContextProvider } from "./contexts/GraphicDesignContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,19 @@ const router = createBrowserRouter([
     path: "/concept-art",
     element: (
       <LoadAssets PageToLoad={() => <ConceptArt />} fonts={gameDesignFonts} />
+    ),
+  },
+  {
+    path: "/graphic-design",
+    element: (
+      <LoadAssets
+        PageToLoad={() => (
+          <GraphicDesignContextProvider>
+            <GraphicDesign />
+          </GraphicDesignContextProvider>
+        )}
+        fonts={gameDesignFonts}
+      />
     ),
   },
 ]);

@@ -1,4 +1,12 @@
-import { Center, Flex, HStack, Text, chakra, Image } from "@chakra-ui/react";
+import {
+  Center,
+  Flex,
+  HStack,
+  Text,
+  chakra,
+  Image,
+  Spinner,
+} from "@chakra-ui/react";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { useGameDesignContext } from "../../../contexts/GameDesignContext";
 import GDDPageButton from "./GDDPageButton";
@@ -23,30 +31,9 @@ const GDDViewer = () => {
             src={`/assets/images/game-design/gdds/${lowerCase(
               whichGameDesign as string
             )}/${images[gddPageNumber - 1]}`}
+            fallback={<Spinner size="xl" color="white" />}
           />
         </Center>
-        {/* <Center position="absolute" boxSize="100%">
-            <Page
-              key={renderedPageNumber}
-              pageNumber={renderedPageNumber}
-              width={500}
-              renderTextLayer={false}
-              onRenderSuccess={() => setRenderedPageNumber(gddPageNumber)}
-            />
-          </Center>
-          <Center
-            opacity={isLoading ? 0 : 1}
-            position="absolute"
-            boxSize="100%"
-          >
-            <Page
-              key={gddPageNumber}
-              pageNumber={gddPageNumber}
-              width={500}
-              renderTextLayer={false}
-              onRenderSuccess={() => setRenderedPageNumber(gddPageNumber)}
-            />
-          </Center> */}
       </Center>
 
       <HStack w="60%" justifyContent={"space-evenly"} mt="20px">
