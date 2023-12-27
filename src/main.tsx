@@ -16,6 +16,8 @@ import { GameDesignContextProvider } from "./contexts/GameDesignContext.tsx";
 import ConceptArt from "./pages/ConceptArt.tsx";
 import GraphicDesign from "./pages/GraphicDesign.tsx";
 import { GraphicDesignContextProvider } from "./contexts/GraphicDesignContext.tsx";
+import { GenAIArtContextProvider } from "./contexts/GenAIArtContext.tsx";
+import GenAIArt from "./pages/GenAIArt.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,9 +40,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/concept-art",
-    element: (
-      <LoadAssets PageToLoad={() => <ConceptArt />} fonts={gameDesignFonts} />
-    ),
+    element: <LoadAssets PageToLoad={() => <ConceptArt />} />,
   },
   {
     path: "/graphic-design",
@@ -51,7 +51,18 @@ const router = createBrowserRouter([
             <GraphicDesign />
           </GraphicDesignContextProvider>
         )}
-        fonts={gameDesignFonts}
+      />
+    ),
+  },
+  {
+    path: "/gen-ai-art",
+    element: (
+      <LoadAssets
+        PageToLoad={() => (
+          <GenAIArtContextProvider>
+            <GenAIArt />
+          </GenAIArtContextProvider>
+        )}
       />
     ),
   },

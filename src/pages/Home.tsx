@@ -40,6 +40,11 @@ const Home = () => {
       image: "graphic-design-logo.svg",
       action: () => handleNavigate("/graphic-design"),
     },
+    {
+      text: "Generative AI Art",
+      image: "gen_ai_logo.png",
+      action: () => handleNavigate("/gen-ai-art"),
+    },
   ];
 
   const { handleNavigate } = useHandleNavigation();
