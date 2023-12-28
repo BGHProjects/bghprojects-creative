@@ -100,7 +100,6 @@ const GenAIArt = () => {
           </Center>
         </motion.div>
         <GenAIArtContentFrame />
-        {/* <GameDesignGameContent /> */}
       </PageContainer>
     </>
   );

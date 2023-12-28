@@ -39,6 +39,15 @@ export const content: Record<string, any> = {
     link: "https://github.com/lllyasviel/Fooocus",
     len: 6,
   },
+  [GenAIArtViewed.SauronShoes1]: {
+    artOption: GenAIArtViewed.SauronShoes1,
+    filePath: "sauron-shoes-1",
+    ext: ".jpeg",
+    prompt: "basketball shoes in the style of Sauron from Lord of the Rings",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
   [GenAIArtViewed.AnimePowerarmourGuy2]: {
     artOption: GenAIArtViewed.AnimePowerarmourGuy2,
     filePath: "anime-powerarmour-guy-2",
@@ -54,6 +63,30 @@ export const content: Record<string, any> = {
     link: "https://github.com/lllyasviel/Fooocus",
     len: 4,
   },
+  [GenAIArtViewed.GlassBlackHole]: {
+    artOption: GenAIArtViewed.GlassBlackHole,
+    filePath: "glass-black-hole-1",
+    ext: ".jpeg",
+    prompt:
+      "A polished sphere, perfectly reflecting its surroundings, floats within a black hole. Within the sphere, endless reflections of alien galaxies and distorted starscapes create a mesmerizing universe of non-Euclidean geometry. Render in a surreal style with a hypnotic blend of reflections, cosmic imagery, and distorted perspectives.",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.DemonSamurai1]: {
+    artOption: GenAIArtViewed.DemonSamurai1,
+    filePath: "demon-samurai-1",
+    ext: ".png",
+    prompt:
+      "Full body image of a demon samurai with metallic black and purple armour, covered in flags and spikes, cinematic, dynamic light, detailed, sharp focus, winning, grand, open, transparent, highly intricate, artistic, innocent, still, pretty, symmetry, great composition, perfect, aesthetic, very inspirational, real, fine detail, clear, crisp, original, creative, novel",
+    styles: "'Fooocus V2', 'MRE Anime', 'SAI Anime', 'MRE Manga', 'Misc Manga'",
+    baseModel: "juggernautXL_version6Rundiffusion.safetensors",
+    sampler: "dpmpp_2m_sde_gpu",
+    lora1: "sd_xl_offset_example-lora_1.0.safetensors : 0.1",
+    ai: "Fooocus",
+    link: "https://github.com/lllyasviel/Fooocus",
+    len: 6,
+  },
   [GenAIArtViewed.AnimePowerarmourGuy3]: {
     artOption: GenAIArtViewed.AnimePowerarmourGuy3,
     filePath: "anime-powerarmour-guy-3",
@@ -66,6 +99,16 @@ export const content: Record<string, any> = {
     lora1: "sd_xl_offset_example-lora_1.0.safetensors : 0.1",
     ai: "Fooocus",
     link: "https://github.com/lllyasviel/Fooocus",
+    len: 4,
+  },
+  [GenAIArtViewed.SpaceCathedral1]: {
+    artOption: GenAIArtViewed.SpaceCathedral1,
+    filePath: "space-cathedral-1",
+    ext: ".jpeg",
+    prompt:
+      "The inside of a photorealistic alien space cathedral, full of colour and immense detail",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
     len: 4,
   },
   [GenAIArtViewed.AnimePrincessSamuraiGirl1]: {
@@ -82,18 +125,49 @@ export const content: Record<string, any> = {
     link: "https://github.com/lllyasviel/Fooocus",
     len: 6,
   },
-  [GenAIArtViewed.DemonSamurai1]: {
-    artOption: GenAIArtViewed.DemonSamurai1,
-    filePath: "demon-samurai-1",
+  [GenAIArtViewed.CelestialDreamWeave]: {
+    artOption: GenAIArtViewed.CelestialDreamWeave,
+    filePath: "celestial-dream-weave-1",
+    ext: ".jpeg",
+    prompt:
+      "Full scale view of a workshop of a celestial dream weaver. Threads of spun moonlight and stardust shimmer on a loom built from petrified clouds. Intricate knots and weaves form fantastical creatures and landscapes, pulsating with vibrant bioluminescent hues.",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.AnimeSuperTeam1]: {
+    artOption: GenAIArtViewed.AnimeSuperTeam1,
+    filePath: "anime-super-team-1",
     ext: ".png",
     prompt:
-      "Full body image of a demon samurai with metallic black and purple armour, covered in flags and spikes, cinematic, dynamic light, detailed, sharp focus, winning, grand, open, transparent, highly intricate, artistic, innocent, still, pretty, symmetry, great composition, perfect, aesthetic, very inspirational, real, fine detail, clear, crisp, original, creative, novel",
-    styles: "'Fooocus V2', 'MRE Anime', 'SAI Anime', 'MRE Manga', 'Misc Manga'",
+      "Movie poster of a team of 5 unique anime protagonists, 2 female 3 male, all with different colours and costumes, with a background of a space storm",
+    styles:
+      "'Fooocus Sharp', 'MRE Anime', 'SAI Anime', 'Misc Manga', 'MRE Manga'",
     baseModel: "juggernautXL_version6Rundiffusion.safetensors",
     sampler: "dpmpp_2m_sde_gpu",
     lora1: "sd_xl_offset_example-lora_1.0.safetensors : 0.1",
     ai: "Fooocus",
     link: "https://github.com/lllyasviel/Fooocus",
-    len: 6,
+    len: 4,
+  },
+  [GenAIArtViewed.CloudColossus1]: {
+    artOption: GenAIArtViewed.CloudColossus1,
+    filePath: "cloud-colossus-1",
+    ext: ".jpeg",
+    prompt:
+      "Witness a towering figure of pure energy and elemental chaos, formed from the swirling clouds of a raging storm. Lightning bolts arc across its limbs, thunder rumbles in its voice, and torrential rains cascade from its outstretched hands. Render in a dramatic, painterly style that captures the power and fury of the storm, with bold contrasts of light and shadow, and swirling brushstrokes that evoke a sense of awe and wonder.",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.CloudColossus2]: {
+    artOption: GenAIArtViewed.CloudColossus2,
+    filePath: "cloud-colossus-2",
+    ext: ".jpeg",
+    prompt:
+      "Gaze upon a colossal figure sculpted from clouds, towering over a vast landscape. Its features shift and change with the wind, its expression a canvas for the emotions of the sky. Render in a painterly style, capturing the softness and fluidity of clouds, the play of light and shadow, and the fleeting beauty of a moment in time",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
   },
 };

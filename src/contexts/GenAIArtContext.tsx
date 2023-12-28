@@ -16,6 +16,13 @@ enum GenAIArtViewed {
   AnimePowerarmourGuy3 = "AnimePowerarmourGuy3",
   AnimePrincessSamuraiGirl1 = "AnimePrincessSamuraiGirl1",
   DemonSamurai1 = "DemonSamurai1",
+  SauronShoes1 = "SauronShoes1",
+  SpaceCathedral1 = "SpaceCathedral1",
+  GlassBlackHole = "GlassBlackHole1",
+  CelestialDreamWeave = "CelestialDreamWeave",
+  AnimeSuperTeam1 = "AnimeSuperTeam1",
+  CloudColossus1 = "CloudColossus1",
+  CloudColossus2 = "CloudColossus2",
 }
 
 interface IGenAIArtContext {
