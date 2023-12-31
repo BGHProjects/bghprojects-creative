@@ -52,7 +52,7 @@ const GenAIArt = () => {
           }}
         >
           <Center flexDir="column" boxSize="100%" zIndex={1}>
-            <Center w="100%" h="40%">
+            <Center w="100%" h="30%">
               <PopUpText
                 fullText={["Generative AI Art"]}
                 size={60}
@@ -63,7 +63,7 @@ const GenAIArt = () => {
             <Flex
               wrap="wrap"
               mt="40px"
-              maxH="60%"
+              maxH="70%"
               minH="30%"
               overflowY="auto"
               width="62vw"
