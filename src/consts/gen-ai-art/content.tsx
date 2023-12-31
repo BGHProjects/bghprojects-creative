@@ -170,4 +170,44 @@ export const content: Record<string, any> = {
     link: "https://imagine.meta.com/",
     len: 4,
   },
+  [GenAIArtViewed.ColourCloudDragons1]: {
+    artOption: GenAIArtViewed.ColourCloudDragons1,
+    filePath: "colour-cloud-dragons-1",
+    ext: ".jpeg",
+    prompt:
+      "Oil painting of several intricately detailed crystal dragons flying through a sky of multicoloured clouds amidst a lightning storm",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 6,
+  },
+  [GenAIArtViewed.PaintedSpaceDemon1]: {
+    artOption: GenAIArtViewed.PaintedSpaceDemon1,
+    filePath: "painted-space-demon-1",
+    ext: ".jpeg",
+    prompt:
+      "An armoured nebula demon amidst celestial bodies, their flowing form composed of stardust and swirling galaxies, painted in a blend of Van Gogh's starry night and Art Deco futurism.",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.ColourfulPaint1]: {
+    artOption: GenAIArtViewed.ColourfulPaint1,
+    filePath: "colourful-paint-1",
+    ext: ".jpeg",
+    prompt:
+      "A kaleidoscope of abstract shapes and vibrant glowing hues dances across the canvas, each swirl and splatter echoing a musical note, creating a harmonious composition that synesthesia can almost translate. (Think Kandinsky meets a musical score.)",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.VolcanoCity1]: {
+    artOption: GenAIArtViewed.VolcanoCity1,
+    filePath: "volcano-city-1",
+    ext: ".jpeg",
+    prompt:
+      "A city reborn from the ashes of a volcanic eruption, with glowing lava veins running through obsidian architecture, neon lights reflecting off obsidian skyscrapers, and phoenixes soaring above, symbolizing hope and resilience. (Think a cyberpunk landscape infused with mythological grandeur.)",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 8,
+  },
 };
