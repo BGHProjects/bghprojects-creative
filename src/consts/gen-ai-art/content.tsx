@@ -210,4 +210,23 @@ export const content: Record<string, any> = {
     link: "https://imagine.meta.com/",
     len: 8,
   },
+  [GenAIArtViewed.CrazyPalance1]: {
+    artOption: GenAIArtViewed.CrazyPalance1,
+    filePath: "crazy-palace-1",
+    ext: ".jpeg",
+    prompt:
+      "A shimmering palace where holographic projections create an ever-changing illusion of architecture, walls morphing into mythical creatures, floors transforming into swirling constellations",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 8,
+  },
+  [GenAIArtViewed.PaintedPhoenix1]: {
+    artOption: GenAIArtViewed.PaintedPhoenix1,
+    filePath: "painted-phoenix-1",
+    ext: ".jpeg",
+    prompt: "Oil painting of a bright phoenix",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
 };

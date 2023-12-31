@@ -27,6 +27,8 @@ enum GenAIArtViewed {
   PaintedSpaceDemon1 = "PaintedSpaceDemon1",
   ColourfulPaint1 = "ColourfulPaint1",
   VolcanoCity1 = "VolcanoCity1",
+  CrazyPalance1 = "CrazyPalace1",
+  PaintedPhoenix1 = "PaintedPhoenix1",
 }
 
 interface IGenAIArtContext {
