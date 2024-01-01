@@ -229,4 +229,52 @@ export const content: Record<string, any> = {
     link: "https://imagine.meta.com/",
     len: 4,
   },
+  [GenAIArtViewed.SpaceStorm1]: {
+    artOption: GenAIArtViewed.SpaceStorm1,
+    filePath: "space-storm-1",
+    ext: ".jpeg",
+    prompt:
+      "Incredibly detailed and vibrant cosmic storm, filled with clouds and lightning bolts",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 12,
+  },
+  [GenAIArtViewed.RomanShoes1]: {
+    artOption: GenAIArtViewed.RomanShoes1,
+    filePath: "roman-empire-shoes-1",
+    ext: ".jpeg",
+    prompt: "Basketball shoes designed as if they were from the Roman empire",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.CyberpunkFashionShow1]: {
+    artOption: GenAIArtViewed.CyberpunkFashionShow1,
+    filePath: "cyberpunk-fashion-show-1",
+    ext: ".jpeg",
+    prompt:
+      "An android modelling a cyberpunk style jacket suit at a fashion show",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 6,
+  },
+  [GenAIArtViewed.OrnateJapaneseSupercar1]: {
+    artOption: GenAIArtViewed.OrnateJapaneseSupercar1,
+    filePath: "ornate-japanese-supercar-1",
+    ext: ".jpeg",
+    prompt: "Supercar design with an ornate japanese style",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.PlanetSurfaceExplosion1]: {
+    artOption: GenAIArtViewed.PlanetSurfaceExplosion1,
+    filePath: "planet-surface-explosion-1",
+    ext: ".jpeg",
+    prompt:
+      "A massive explosion on the surface of a vibrant and colourful exoplanet",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 4,
+  },
 };

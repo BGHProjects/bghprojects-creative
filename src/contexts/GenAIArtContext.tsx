@@ -29,6 +29,11 @@ enum GenAIArtViewed {
   VolcanoCity1 = "VolcanoCity1",
   CrazyPalance1 = "CrazyPalace1",
   PaintedPhoenix1 = "PaintedPhoenix1",
+  SpaceStorm1 = "SpaceStorm1",
+  RomanShoes1 = "RomanShoes1",
+  CyberpunkFashionShow1 = "CyberpunkFashionShow1",
+  OrnateJapaneseSupercar1 = "OrnateJapaneseSupercar1",
+  PlanetSurfaceExplosion1 = "PlanetSurfaceExplosion1",
 }
 
 interface IGenAIArtContext {
