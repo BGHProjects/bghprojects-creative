@@ -45,6 +45,11 @@ const Home = () => {
       image: "gen_ai_logo.png",
       action: () => handleNavigate("/gen-ai-art"),
     },
+    {
+      text: "UI / UX Design",
+      image: "ui-ux-logo.png",
+      action: () => handleNavigate("/ui-ux-design"),
+    },
   ];
 
   const { handleNavigate } = useHandleNavigation();
@@ -56,14 +61,17 @@ const Home = () => {
         <ScreenAnimation />
         <PopUpText fullText={titleText} size={80} staggerTime={0.02} />
         <Grid
-          templateColumns={"repeat(2,1fr)"}
+          templateColumns={"repeat(3,1fr)"}
           templateRows={"repeat(2,1fr)"}
           gap={10}
-          w={buttonWidth * buttonScale * buttons.length + containerPadding}
-          h={buttonHeight * buttonScale * buttons.length + containerPadding}
+          w={buttonWidth * buttonScale * buttons.length + containerPadding * 2}
+          h={
+            buttonHeight * 0.75 * buttonScale * buttons.length +
+            containerPadding
+          }
           p={`${containerPadding}px`}
-          maxW="800px"
-          maxH="800px"
+          maxW="900px"
+          maxH="600px"
         >
           {buttons.map((button, index) => (
             <GridItem key={JSON.stringify(button)}>

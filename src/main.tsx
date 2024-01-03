@@ -18,6 +18,8 @@ import GraphicDesign from "./pages/GraphicDesign.tsx";
 import { GraphicDesignContextProvider } from "./contexts/GraphicDesignContext.tsx";
 import { GenAIArtContextProvider } from "./contexts/GenAIArtContext.tsx";
 import GenAIArt from "./pages/GenAIArt.tsx";
+import { UIUXDesignContextProvider } from "./contexts/UIUXDesignContext.tsx";
+import UIUXDesign from "./pages/UIUXDesign.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,18 @@ const router = createBrowserRouter([
           <GraphicDesignContextProvider>
             <GraphicDesign />
           </GraphicDesignContextProvider>
+        )}
+      />
+    ),
+  },
+  {
+    path: "/ui-ux-design",
+    element: (
+      <LoadAssets
+        PageToLoad={() => (
+          <UIUXDesignContextProvider>
+            <UIUXDesign />
+          </UIUXDesignContextProvider>
         )}
       />
     ),

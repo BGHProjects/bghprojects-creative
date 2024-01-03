@@ -3,19 +3,19 @@ import useAppButton from "../../hooks/componentHooks/useAppButton";
 import { Center, Text } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import {
-  GraphicDesignViewed,
-  useGraphicDesignContext,
-} from "../../contexts/GraphicDesignContext";
+  UIUXDesignViewed,
+  useUIUXDesignContext,
+} from "../../contexts/UIUXDesignContext";
 
 /**
- * Button that unselects the Graphic Design currently viewed
- * to return the user to the Graphic Design page
+ * Button that unselects the UI UX Design currently viewed
+ * to return the user to the UI UX Design page
  */
-const GraphicDesignBackButton = () => {
-  const { setGraphicDesignViewed } = useGraphicDesignContext();
+const UIUXDesignBackButton = () => {
+  const { setUIUXDesignViewed } = useUIUXDesignContext();
 
   const { functions } = useAppButton(0, () => {
-    setGraphicDesignViewed(GraphicDesignViewed.None);
+    setUIUXDesignViewed(UIUXDesignViewed.None);
   });
   const { handleHoverState, handleMouseEnter, handleMouseLeave, handleClick } =
     functions;
@@ -41,11 +41,11 @@ const GraphicDesignBackButton = () => {
       <Center boxSize="100%">
         <ArrowBackIcon color="white" boxSize={7} mr="10px" />
         <Text color="white" fontFamily="Electrolize">
-          Back to Graphic Design
+          Back to UI / UX Design
         </Text>
       </Center>
     </motion.div>
   );
 };
 
-export default GraphicDesignBackButton;
+export default UIUXDesignBackButton;
