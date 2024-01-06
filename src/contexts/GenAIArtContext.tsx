@@ -34,6 +34,12 @@ enum GenAIArtViewed {
   CyberpunkFashionShow1 = "CyberpunkFashionShow1",
   OrnateJapaneseSupercar1 = "OrnateJapaneseSupercar1",
   PlanetSurfaceExplosion1 = "PlanetSurfaceExplosion1",
+  BionicleMoviePoster1 = "BionicleMoviePoster1",
+  CrystalCity1 = "CrystalCity1",
+  AugmentedRealityCity1 = "AugmentedRealityCity1",
+  AnimeSuperTeam2 = "AnimeSuperTeam2",
+  GeometricDreamscape1 = "GeometricDreamScape1",
+  CosmicBrainMapVanGogh1 = "CosmicBrainMapVanGogh1",
 }
 
 interface IGenAIArtContext {

@@ -10,6 +10,36 @@ export const content: Record<string, any> = {
     link: "https://imagine.meta.com/",
     len: 4,
   },
+  [GenAIArtViewed.AnimeSuperTeam2]: {
+    artOption: GenAIArtViewed.AnimeSuperTeam2,
+    filePath: "anime-super-team-2",
+    ext: ".jpg",
+    prompt:
+      "Incredibly detailed and vibrantly coloured movie poster of an original science fiction based anime superhero team up movie",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.VolcanoCity1]: {
+    artOption: GenAIArtViewed.VolcanoCity1,
+    filePath: "volcano-city-1",
+    ext: ".jpeg",
+    prompt:
+      "A city reborn from the ashes of a volcanic eruption, with glowing lava veins running through obsidian architecture, neon lights reflecting off obsidian skyscrapers, and phoenixes soaring above, symbolizing hope and resilience. (Think a cyberpunk landscape infused with mythological grandeur.)",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 8,
+  },
+  [GenAIArtViewed.SpaceStorm1]: {
+    artOption: GenAIArtViewed.SpaceStorm1,
+    filePath: "space-storm-1",
+    ext: ".jpeg",
+    prompt:
+      "Incredibly detailed and vibrant cosmic storm, filled with clouds and lightning bolts",
+    ai: "Meta AI Imagine",
+    link: "https://imagine.meta.com/",
+    len: 12,
+  },
   [GenAIArtViewed.BioCity1]: {
     artOption: GenAIArtViewed.BioCity1,
     filePath: "bio-city-1",
@@ -23,6 +53,16 @@ export const content: Record<string, any> = {
     lora1: "sd_xl_offset_example-lora_1.0.safetensors : 0.1",
     ai: "Fooocus",
     link: "https://github.com/lllyasviel/Fooocus",
+    len: 4,
+  },
+  [GenAIArtViewed.CrystalCity1]: {
+    artOption: GenAIArtViewed.CrystalCity1,
+    filePath: "crystal-city-1",
+    ext: ".jpg",
+    prompt:
+      "A rogue planet, adrift in the endless void, is home to a crystalline city bathed in the light of a double sun. Towers carved from amethyst and citrine pierce the sky, their facets reflecting the suns in a kaleidoscope of shimmering colors. Bridges of spun quartz connect the towers, forming an intricate web of gleaming lines against the inky blackness of space.",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
     len: 4,
   },
   [GenAIArtViewed.AnimePowerarmourGuy1]: {
@@ -200,16 +240,7 @@ export const content: Record<string, any> = {
     link: "https://imagine.meta.com/",
     len: 4,
   },
-  [GenAIArtViewed.VolcanoCity1]: {
-    artOption: GenAIArtViewed.VolcanoCity1,
-    filePath: "volcano-city-1",
-    ext: ".jpeg",
-    prompt:
-      "A city reborn from the ashes of a volcanic eruption, with glowing lava veins running through obsidian architecture, neon lights reflecting off obsidian skyscrapers, and phoenixes soaring above, symbolizing hope and resilience. (Think a cyberpunk landscape infused with mythological grandeur.)",
-    ai: "Meta AI Imagine",
-    link: "https://imagine.meta.com/",
-    len: 8,
-  },
+
   [GenAIArtViewed.CrazyPalance1]: {
     artOption: GenAIArtViewed.CrazyPalance1,
     filePath: "crazy-palace-1",
@@ -229,16 +260,7 @@ export const content: Record<string, any> = {
     link: "https://imagine.meta.com/",
     len: 4,
   },
-  [GenAIArtViewed.SpaceStorm1]: {
-    artOption: GenAIArtViewed.SpaceStorm1,
-    filePath: "space-storm-1",
-    ext: ".jpeg",
-    prompt:
-      "Incredibly detailed and vibrant cosmic storm, filled with clouds and lightning bolts",
-    ai: "Meta AI Imagine",
-    link: "https://imagine.meta.com/",
-    len: 12,
-  },
+
   [GenAIArtViewed.RomanShoes1]: {
     artOption: GenAIArtViewed.RomanShoes1,
     filePath: "roman-empire-shoes-1",
@@ -275,6 +297,47 @@ export const content: Record<string, any> = {
       "A massive explosion on the surface of a vibrant and colourful exoplanet",
     ai: "Meta AI Imagine",
     link: "https://imagine.meta.com/",
+    len: 4,
+  },
+  [GenAIArtViewed.BionicleMoviePoster1]: {
+    artOption: GenAIArtViewed.BionicleMoviePoster1,
+    filePath: "bionicle-movie-poster-1",
+    ext: ".jpg",
+    prompt: "Bionicle movie poster",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+
+  [GenAIArtViewed.AugmentedRealityCity1]: {
+    artOption: GenAIArtViewed.AugmentedRealityCity1,
+    filePath: "augmented-reality-city-1",
+    ext: ".jpg",
+    prompt:
+      "A city street transformed by an augmented reality art exhibition, where virtual sculptures and paintings appear to interact seamlessly with the physical environment, blurring the line between the digital and real worlds.",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+
+  [GenAIArtViewed.GeometricDreamscape1]: {
+    artOption: GenAIArtViewed.GeometricDreamscape1,
+    filePath: "geometric-dreamscape-1",
+    ext: ".jpg",
+    prompt:
+      "A surreal dreamscape where geometric shapes float in a cosmic void, intertwined with strands of liquid light, creating an otherworldly and hypnotic visual experience, oil painting",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.CosmicBrainMapVanGogh1]: {
+    artOption: GenAIArtViewed.CosmicBrainMapVanGogh1,
+    filePath: "cosmic-brain-map-van-gogh-1",
+    ext: ".jpg",
+    prompt:
+      "A cosmic map of the human mind. Constellations of swirling colors represent emotions, their brightness fluctuating with intensity. Joy bursts into supernovae, fear shimmers like nebulae, and love twinkles like distant stars. This celestial chart guides us through the inner universe, where every thought paints a star on the canvas of our being, Van Gogh painting",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
     len: 4,
   },
 };
