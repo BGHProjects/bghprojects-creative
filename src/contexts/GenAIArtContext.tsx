@@ -40,6 +40,9 @@ enum GenAIArtViewed {
   AnimeSuperTeam2 = "AnimeSuperTeam2",
   GeometricDreamscape1 = "GeometricDreamScape1",
   CosmicBrainMapVanGogh1 = "CosmicBrainMapVanGogh1",
+  ArmouredVampireDragon1 = "ArmouredVampireDragon1",
+  DetailedCyberneticWarrior1 = "DetailedCyberneticWarrior1",
+  ArmouredVampireDragon2 = "ArmouredVampireDragon2",
 }
 
 interface IGenAIArtContext {

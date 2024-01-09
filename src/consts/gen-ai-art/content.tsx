@@ -340,4 +340,33 @@ export const content: Record<string, any> = {
     link: "https://www.bing.com/images/create",
     len: 4,
   },
+  [GenAIArtViewed.ArmouredVampireDragon1]: {
+    artOption: GenAIArtViewed.ArmouredVampireDragon1,
+    filePath: "armoured-vampire-dragon-1",
+    ext: ".jpg",
+    prompt: "Armoured vampire dragon in the style of YuGiOh",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.DetailedCyberneticWarrior1]: {
+    artOption: GenAIArtViewed.DetailedCyberneticWarrior1,
+    filePath: "detailed-cybernetic-warrior-1",
+    ext: ".jpg",
+    prompt:
+      "Intricately detailed cybernetic warrior, with a colossal sword, complicated shield design, and rippled, shining, spiky armour in the style of YuGiOh",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.ArmouredVampireDragon2]: {
+    artOption: GenAIArtViewed.ArmouredVampireDragon2,
+    filePath: "armoured-vampire-dragon-2",
+    ext: ".jpg",
+    prompt:
+      "Intricately detailed nightmarish black, purple, and silver zombie dragon, with rippled flesh, and vicious fangs and claws and spiked wings, with a red raging thunderstorm, in the style of YuGiOh",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
 };
