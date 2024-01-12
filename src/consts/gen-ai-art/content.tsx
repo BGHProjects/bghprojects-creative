@@ -369,4 +369,14 @@ export const content: Record<string, any> = {
     link: "https://www.bing.com/images/create",
     len: 4,
   },
+  [GenAIArtViewed.CyberpunkWarriorGirl1]: {
+    artOption: GenAIArtViewed.CyberpunkWarriorGirl1,
+    filePath: "cyberpunk-warrior-girl-1",
+    ext: ".jpg",
+    prompt:
+      "Gorgeous female as a cyberpunk mecha warrior pilot, eva, sci-fi, dystopian future, cinematic, neon lights, war machine, highly detailed, lowkey",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 3,
+  },
 };
