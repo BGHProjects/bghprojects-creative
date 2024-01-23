@@ -90,6 +90,7 @@ const theme = extendTheme({
     Iceland: `Iceland, sans-serif`,
     Lora: `Lora, sans-serif`,
     Varela: `Varela, sans-serif`,
+    Vollkorn: `Vollkorn, sans-serif`,
   },
 });
 

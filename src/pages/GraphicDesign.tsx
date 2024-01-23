@@ -38,6 +38,12 @@ const GraphicDesign = () => {
       action: () =>
         handleSetGraphicDesignViewed(GraphicDesignViewed.CovenantCurrency),
     },
+    {
+      text: "Bionicle TCG",
+      image: "bionicle-tcg-logo.png",
+      action: () =>
+        handleSetGraphicDesignViewed(GraphicDesignViewed.BionicleTCG),
+    },
   ];
 
   const optionButtonProps = {

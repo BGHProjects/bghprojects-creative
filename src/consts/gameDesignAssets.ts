@@ -23,6 +23,10 @@ const gameDesignFonts = [
     name: "Open Sans",
     url: "/assets/fonts/Varela_Round/VarelaRound-Regular.ttf",
   },
+  {
+    name: "Open Sans",
+    url: "/assets/fonts/Vollkorn/Vollkorn-Regular.ttf",
+  },
 ];
 
 const gameDesignImages = [
@@ -31,6 +35,7 @@ const gameDesignImages = [
   "/assets/images/game-design/backgrounds/WorldEngine.png",
   "/assets/images/game-design/backgrounds/MMBG.png",
   "/assets/images/game-design/backgrounds/FabulaExMachina.png",
+  "/assets/images/game-design/backgrounds/BionicleTCG.png",
 ];
 
 export { gameDesignFonts, gameDesignImages };

@@ -19,6 +19,10 @@ import {
   FabulaExMachinaDesignContent,
 } from "../components/GameDesign/GameDesignPageContent/GameContent/FabulaExMachinaContent";
 import { GameDesignViewed } from "../contexts/GameDesignContext";
+import {
+  BionicleTCGDesignContent,
+  BionicleTCGTextContent,
+} from "../components/GameDesign/GameDesignPageContent/GameContent/BionicleTCGContent";
 
 export const content: Record<string, any> = {
   [GameDesignViewed.Fram]: {
@@ -55,5 +59,12 @@ export const content: Record<string, any> = {
     textIntro: <FabulaExMachinaTextContent />,
     contentTitle: "Gameplay Footage",
     content: <FabulaExMachinaDesignContent />,
+  },
+  [GameDesignViewed.BionicleTCG]: {
+    title: "BIONICLE TCG",
+    fontFamily: "Vollkorn",
+    textIntro: <BionicleTCGTextContent />,
+    contentTitle: "Game Card Examples",
+    content: <BionicleTCGDesignContent />,
   },
 };

@@ -111,3 +111,10 @@ button:focus-visible {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/assets/fonts/Vollkorn/Vollkorn-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

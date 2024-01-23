@@ -27,7 +27,6 @@ const options = [
     fontFamily: "Iceland",
     gameDesign: GameDesignViewed.MetaRangers,
   },
-
   {
     image: "GoGetEm",
     text: "GoGetEm",
@@ -45,6 +44,12 @@ const options = [
     text: "Fabula Ex Machina",
     fontFamily: "Varela",
     gameDesign: GameDesignViewed.FabulaExMachina,
+  },
+  {
+    image: "BionicleTCG",
+    text: "BIONICLE TCG",
+    fontFamily: "Vollkorn",
+    gameDesign: GameDesignViewed.BionicleTCG,
   },
 ];
 

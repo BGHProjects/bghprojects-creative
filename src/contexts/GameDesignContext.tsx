@@ -14,6 +14,7 @@ enum GameDesignViewed {
   WorldEngine = "WorldEngine",
   GoGetEm = "GoGetEm",
   FabulaExMachina = "FabulaExMachina",
+  BionicleTCG = "BionicleTCG",
 }
 
 interface IGameDesignContext {
@@ -152,12 +153,31 @@ const GameDesignContextProvider = ({
     "Prompt Engineering 2.png",
   ];
 
+  const bionicleTCGGDDImages: any[] = [
+    "Title Page.png",
+    "Contents Page.png",
+    "Disclaimer.png",
+    "Executive Summary.png",
+    "Design Influences.png",
+    "Win Conditions.png",
+    "Card Types.png",
+    "Card Types 2.png",
+    "Card Types 3.png",
+    "Card Types 4.png",
+    "Card Types 5.png",
+    "Game Setup.png",
+    "Gameplay.png",
+    "Gameplay 2.png",
+    "Gameplay 3.png",
+  ];
+
   const whichImages = {
     [GameDesignViewed.GoGetEm]: goGetEmGDDImages,
     [GameDesignViewed.WorldEngine]: worldEngineGDDImages,
     [GameDesignViewed.MetaRangers]: metarangersGDDImages,
     [GameDesignViewed.Fram]: framGDDImages,
     [GameDesignViewed.FabulaExMachina]: fabulaExMachinaGDDImages,
+    [GameDesignViewed.BionicleTCG]: bionicleTCGGDDImages,
   };
 
   return (

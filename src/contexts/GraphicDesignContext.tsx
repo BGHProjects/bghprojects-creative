@@ -10,6 +10,7 @@ import {
 enum GraphicDesignViewed {
   None = "None",
   CovenantCurrency = "CovenantCurrency",
+  BionicleTCG = "BionicleTCG",
 }
 
 interface IGraphicDesignContext {
