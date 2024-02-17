@@ -37,6 +37,11 @@ const UIUXDesign = () => {
       image: "to-the-stars-logo.png",
       action: () => handleSetUIUXDesignViewed(UIUXDesignViewed.ToTheStars),
     },
+    {
+      text: "PULSE",
+      image: "pulse-logo.png",
+      action: () => handleSetUIUXDesignViewed(UIUXDesignViewed.Pulse),
+    },
   ];
 
   const optionButtonProps = {

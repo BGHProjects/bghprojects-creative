@@ -10,6 +10,7 @@ import {
 enum UIUXDesignViewed {
   None = "None",
   ToTheStars = "ToTheStars",
+  Pulse = "Pulse",
 }
 
 interface IUIUXDesignContext {

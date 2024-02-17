@@ -6,6 +6,7 @@ import { chakra, Text, Image, Spinner, HStack, Center } from "@chakra-ui/react";
  */
 const ToTheStarsContent = () => {
   const imagePath = "/assets/images/ui-ux-design/designs/to-the-stars/";
+  const screenImageHeight = "750px";
 
   return (
     <>
@@ -150,7 +151,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Login Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
         <AppText fontSize="20px" w="40%">
           This is the page that the user would see once they initially load the
@@ -180,7 +181,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Home Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
       </ExampleRow>
 
@@ -188,7 +189,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Explore Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
         <AppText fontSize="20px" w="40%">
           This page represents the start of the secondary flow within the app,
@@ -217,7 +218,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Celestial Object Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
       </ExampleRow>
 
@@ -225,7 +226,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Book Flight Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
         <AppText fontSize="20px" w="40%">
           This page represents the primary action that a user would take in To
@@ -251,7 +252,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Select Flight Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
       </ExampleRow>
 
@@ -259,7 +260,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Select Seat Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
         <AppText fontSize="20px" w="40%">
           Once the user has choosen their desired flight, they are then able to
@@ -281,7 +282,7 @@ const ToTheStarsContent = () => {
         <Image
           src={imagePath + "Boarding Pass Page.png"}
           fallback={<Spinner size="xl" color="white" />}
-          maxHeight="600px"
+          maxHeight={screenImageHeight}
         />
       </ExampleRow>
       <AppText textAlign="left" fontSize="30px">
