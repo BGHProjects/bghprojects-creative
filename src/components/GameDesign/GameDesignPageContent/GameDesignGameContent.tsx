@@ -6,6 +6,7 @@ import { useGameDesignContext } from "../../../contexts/GameDesignContext";
 import ViewGDDButton from "../../ViewGDDButton";
 import GameDesignBackButton from "../GameDesignBackButton";
 import GDDViewer from "./GDDViewer";
+import { customScrollBar } from "../../../consts/custom-scrollbar";
 
 /**
  * The content that is displayed when a game is selected
@@ -64,19 +65,7 @@ const GameDesignGameContent = () => {
         pb="100px"
         overflow="auto"
         px={{ base: "10px", md: "40px", lg: "70px" }}
-        sx={{
-          "&::-webkit-scrollbar": {
-            w: "2",
-            mr: "10",
-          },
-          "&::-webkit-scrollbar-track": {
-            w: "3",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            borderRadius: "10",
-            bg: "white",
-          },
-        }}
+        sx={customScrollBar}
       >
         <GameDesignBackButton />
         <TitleText fontFamily={gameDesignContent.fontFamily}>

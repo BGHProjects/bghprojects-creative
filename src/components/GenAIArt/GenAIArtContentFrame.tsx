@@ -4,6 +4,7 @@ import { useGenAIArtContext } from "../../contexts/GenAIArtContext";
 import { Flex, Image, chakra, Text, Link, Spinner } from "@chakra-ui/react";
 import GenAIArtBackButton from "./GenAIArtBackButton";
 import { range } from "lodash";
+import { customScrollBar } from "../../consts/custom-scrollbar";
 
 /**
  * The frame that holds the content that is displayed when
@@ -83,19 +84,7 @@ const GenAIArtContentFrame = () => {
         pb="100px"
         overflow="auto"
         px={{ base: "10px", md: "40px", lg: "70px" }}
-        sx={{
-          "&::-webkit-scrollbar": {
-            w: "2",
-            mr: "10",
-          },
-          "&::-webkit-scrollbar-track": {
-            w: "3",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            borderRadius: "10",
-            bg: "white",
-          },
-        }}
+        sx={customScrollBar}
       >
         <GenAIArtBackButton />
         <TextItem title="Prompt" content={cont.prompt} />

@@ -20,6 +20,7 @@ import { GenAIArtContextProvider } from "./contexts/GenAIArtContext.tsx";
 import GenAIArt from "./pages/GenAIArt.tsx";
 import { UIUXDesignContextProvider } from "./contexts/UIUXDesignContext.tsx";
 import UIUXDesign from "./pages/UIUXDesign.tsx";
+import HowImLearning from "./pages/HowImLearning.tsx";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
         )}
       />
     ),
+  },
+  {
+    path: "/how-im-learning",
+    element: <LoadAssets PageToLoad={() => <HowImLearning />} />,
   },
 ]);
 

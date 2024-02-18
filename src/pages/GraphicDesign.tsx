@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import PopUpText from "../components/PopUpText";
 import HomePageButton from "../components/HomePageButton/HomePageButton";
 import GraphicDesignContentFrame from "../components/GraphicDesign/GraphicDesignContentFrame";
+import { customScrollBar } from "../consts/custom-scrollbar";
 
 const animDelay = 0.33;
 
@@ -93,19 +94,7 @@ const GraphicDesign = () => {
               mt="40px"
               maxH="60%"
               overflowY="auto"
-              sx={{
-                "&::-webkit-scrollbar": {
-                  w: "1",
-                  mr: "10",
-                },
-                "&::-webkit-scrollbar-track": {
-                  w: "6",
-                },
-                "&::-webkit-scrollbar-thumb": {
-                  borderRadius: "10",
-                  bg: "white",
-                },
-              }}
+              sx={customScrollBar}
             >
               {buttons.map((button, index) => (
                 <GridItem key={JSON.stringify(button)} w="440px" h="220px">

@@ -11,6 +11,7 @@ import {
   GameDesignViewed,
   useGameDesignContext,
 } from "../contexts/GameDesignContext";
+import { customScrollBar } from "../consts/custom-scrollbar";
 
 const animDelay = 0.33;
 
@@ -110,19 +111,7 @@ const GameDesign = () => {
               mt="40px"
               maxH="60%"
               overflowY="auto"
-              sx={{
-                "&::-webkit-scrollbar": {
-                  w: "1",
-                  mr: "10",
-                },
-                "&::-webkit-scrollbar-track": {
-                  w: "6",
-                },
-                "&::-webkit-scrollbar-thumb": {
-                  borderRadius: "10",
-                  bg: "white",
-                },
-              }}
+              sx={customScrollBar}
             >
               {options.map((option, index) => (
                 <GridItem key={JSON.stringify(option)} w="440px" h="220px">

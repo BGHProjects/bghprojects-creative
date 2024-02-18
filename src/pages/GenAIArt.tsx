@@ -12,6 +12,7 @@ import {
 } from "../contexts/GenAIArtContext";
 import { content } from "../consts/gen-ai-art/content";
 import GenAIArtContentFrame from "../components/GenAIArt/GenAIArtContentFrame";
+import { customScrollBar } from "../consts/custom-scrollbar";
 
 const animDelay = 0.05;
 
@@ -69,19 +70,7 @@ const GenAIArt = () => {
               width="62vw"
               minWidth="600px"
               gap="0px"
-              sx={{
-                "&::-webkit-scrollbar": {
-                  w: "1",
-                  mr: "10",
-                },
-                "&::-webkit-scrollbar-track": {
-                  w: "6",
-                },
-                "&::-webkit-scrollbar-thumb": {
-                  borderRadius: "10",
-                  bg: "white",
-                },
-              }}
+              sx={customScrollBar}
             >
               {Object.entries(content).map((option, index) => {
                 return (

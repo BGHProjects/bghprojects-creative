@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useUIUXDesignContext } from "../../contexts/UIUXDesignContext";
 import { content } from "../../consts/ui-ux-design/content";
 import UIUXDesignBackButton from "./UIUXDesignBackButton";
+import { customScrollBar } from "../../consts/custom-scrollbar";
 
 /**
  * The frame that holds the content that is displayed when a
@@ -61,19 +62,7 @@ const UIUXDesignContentFrame = () => {
         pb="100px"
         overflow="auto"
         px={{ base: "10px", md: "40px", lg: "70px" }}
-        sx={{
-          "&::-webkit-scrollbar": {
-            w: "2",
-            mr: "10",
-          },
-          "&::-webkit-scrollbar-track": {
-            w: "3",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            borderRadius: "10",
-            bg: "white",
-          },
-        }}
+        sx={customScrollBar}
       >
         <UIUXDesignBackButton />
         <TitleText>{gdContent.title}</TitleText>

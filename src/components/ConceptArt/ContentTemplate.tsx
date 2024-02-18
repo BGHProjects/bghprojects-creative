@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { Concept } from "../../pages/ConceptArt";
 import DisplayImageRow from "../DisplayImageRow";
 import { useEffect, useRef, useState } from "react";
+import { customScrollBar } from "../../consts/custom-scrollbar";
 
 const transitionDuration = 1;
 
@@ -106,19 +107,7 @@ const ContentTemplate = ({
         overflowY="auto"
         overflowX="hidden"
         flexDir="column"
-        sx={{
-          "&::-webkit-scrollbar": {
-            w: "2",
-            mr: "10",
-          },
-          "&::-webkit-scrollbar-track": {
-            w: "3",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            borderRadius: "10",
-            bg: "white",
-          },
-        }}
+        sx={customScrollBar}
       >
         <AbsoluteContent top="40px">
           <AppFont fontSize="36">{contentTitle}</AppFont>

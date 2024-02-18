@@ -27,28 +27,33 @@ const Home = () => {
   const buttons = [
     {
       text: "Game Design",
-      image: "controller.svg",
+      image: "home-logos/controller.svg",
       action: () => handleNavigate("/game-design"),
     },
     {
       text: "Concept Art",
-      image: "concept-art-logo.svg",
-      action: () => handleNavigate("/concept-art"),
+      image: "home-logos/concept-art-logo.svg",
+      action: () => alert("Under Construction. Visit again soon."),
     },
     {
       text: "Graphic Design",
-      image: "graphic-design-logo.svg",
+      image: "home-logos/graphic-design-logo.svg",
       action: () => handleNavigate("/graphic-design"),
     },
     {
       text: "Generative AI Art",
-      image: "gen_ai_logo.png",
+      image: "home-logos/gen_ai_logo.png",
       action: () => handleNavigate("/gen-ai-art"),
     },
     {
       text: "UI / UX Design",
-      image: "ui-ux-logo.png",
+      image: "home-logos/ui-ux-logo.png",
       action: () => handleNavigate("/ui-ux-design"),
+    },
+    {
+      text: "How I'm Learning",
+      image: "home-logos/learning.png",
+      action: () => handleNavigate("/how-im-learning"),
     },
   ];
 
@@ -65,13 +70,11 @@ const Home = () => {
           templateRows={"repeat(2,1fr)"}
           gap={10}
           w={buttonWidth * buttonScale * buttons.length + containerPadding * 2}
-          h={
-            buttonHeight * 0.75 * buttonScale * buttons.length +
-            containerPadding
-          }
           p={`${containerPadding}px`}
+          pt="100px"
           maxW="900px"
           maxH="600px"
+          minH={buttonHeight * 2 + 200}
         >
           {buttons.map((button, index) => (
             <GridItem key={JSON.stringify(button)}>
