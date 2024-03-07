@@ -45,6 +45,12 @@ const GraphicDesign = () => {
       action: () =>
         handleSetGraphicDesignViewed(GraphicDesignViewed.BionicleTCG),
     },
+    {
+      text: "RENDER Magazine",
+      image: "magazine-icon.png",
+      action: () =>
+        handleSetGraphicDesignViewed(GraphicDesignViewed.RenderMagazine),
+    },
   ];
 
   const optionButtonProps = {

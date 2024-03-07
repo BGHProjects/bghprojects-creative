@@ -1,5 +1,6 @@
 import BionicleTCGContent from "../../components/GraphicDesign/ItemContent/BionicleTCGContent";
 import CovenantCurrencyContent from "../../components/GraphicDesign/ItemContent/CovenantCurrencyContent";
+import RenderMagazineContent from "../../components/GraphicDesign/ItemContent/RenderMagazineContent";
 import { GraphicDesignViewed } from "../../contexts/GraphicDesignContext";
 
 export const content: Record<string, any> = {
@@ -12,5 +13,10 @@ export const content: Record<string, any> = {
     title: "BIONICLE TCG",
     content: <BionicleTCGContent />,
     background: "BionicleTCG.png",
+  },
+  [GraphicDesignViewed.RenderMagazine]: {
+    title: "RENDER Magazine",
+    content: <RenderMagazineContent />,
+    background: "render-mag-bg.png",
   },
 };
