@@ -142,6 +142,64 @@ const RenderMagazineContent = () => {
           />
         </ExampleRow>
       ))}
+      <AppText textAlign="left" fontSize="30px">
+        Contents Page Design
+      </AppText>
+      <AppText fontSize="20px">
+        Two base designs were made for the Contents page; a one-page and
+        two-page version, with several alternative layouts for the two-page
+        version. I wanted to experiement with the layout of the contents page,
+        to differentiate it from other magazines. I iterated having the word
+        "Contents" aligned along different parts of the page, instead of just
+        the top, for visual appeal. I also decided that although there are
+        different relevant parts of the magazine, the "Outputs" section would be
+        the focal or main attraction of the magazine, so I decided to put extra
+        emphasis on that section on the contents page, for the two page
+        versions. I also wanted to continue the heavy usage of images in the
+        contents page, rather than rely on lots of text, and reduced the text
+        content to simply the names of the sections and the page numbers on
+        which they start. I decided to sacrifice the usability of the contents
+        for visual appeal, just to experiment and try to redefine what a
+        contents page is and what it contains. For the image use, I also
+        experiemented with different shapes to house the images instead of just
+        standard boxes or squares, with some designs using sharp and angle
+        trapezoids and rhombuses, again for experimental and differential visual
+        purposes.
+      </AppText>
+      <AppText textAlign="center" fontSize="20px">
+        Two Page Designs
+      </AppText>
+      {range(9).map((item) => (
+        <ExampleRow key={item} mt="20px">
+          <Image
+            src={imagePath + `contents-pages/two-page/cp2p-${item * 2 + 1}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            w="50%"
+          />
+          <Image
+            src={imagePath + `contents-pages/two-page/cp2p-${item * 2 + 2}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            w="50%"
+          />
+        </ExampleRow>
+      ))}
+      <AppText textAlign="center" fontSize="20px">
+        One Page Designs
+      </AppText>
+      {range(6).map((item) => (
+        <ExampleRow key={item} mt="20px">
+          <Image
+            src={imagePath + `contents-pages/one-page/cp1p-${item * 2 + 1}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            h="500px"
+          />
+          <Image
+            src={imagePath + `contents-pages/one-page/cp1p-${item * 2 + 2}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            h="500px"
+          />
+        </ExampleRow>
+      ))}
     </>
   );
 };
