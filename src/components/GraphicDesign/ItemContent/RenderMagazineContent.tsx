@@ -200,6 +200,65 @@ const RenderMagazineContent = () => {
           />
         </ExampleRow>
       ))}
+      <AppText textAlign="left" fontSize="30px">
+        Article Designs
+      </AppText>
+      <AppText fontSize="20px">
+        For the articles that weren't "Outputs", various different columnal
+        layouts were iterated with, to experiment with how the usage of text and
+        images could coalesce, as opposed to the image-dominated examples from
+        the rest of the designs. As with the contents pages, The backgrounds and
+        typography were limited to singular hue colours, as I thought that using
+        background imagery, as well as having image focal points, would make the
+        articles too visually busy and detracted too far from the emphasised
+        content. The "Outputs" articles were all two-page spreads, and solely
+        included images and the names of the fictional AI artists (as well as
+        page numbers and "Outputs" labels). I decided to limit the image numbers
+        to 4, as I found that was a good ratio between different examples to
+        show and the resolution available for each image. I experiemented with
+        the placement of the artists name for visual interest, including the
+        top, bottom, and the center of the spread, which produced results that I
+        found interesting. I also found that including the prompt used to
+        produce the images proved to be cumbersome to design around, as
+        sometimes the prompts were quite detailed and included a lot of text. To
+        rectify this, I numbered the images used, so that they could be
+        cross-referenced with an index at the back of the magazine which would
+        contain the text for the prompts used.
+      </AppText>
+      <AppText textAlign="center" fontSize="20px">
+        Non-Outputs Article Designs
+      </AppText>
+      {range(2).map((item) => (
+        <ExampleRow key={item} mt="20px">
+          <Image
+            src={imagePath + `articles/other/other-${item * 2 + 1}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            h="500px"
+          />
+          <Image
+            src={imagePath + `articles/other/other-${item * 2 + 2}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            h="500px"
+          />
+        </ExampleRow>
+      ))}
+      <AppText textAlign="center" fontSize="20px">
+        Outputs Article Designs
+      </AppText>
+      {range(2).map((item) => (
+        <ExampleRow key={item} mt="20px">
+          <Image
+            src={imagePath + `articles/outputs/outputs-${item * 2 + 1}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            w="50%"
+          />
+          <Image
+            src={imagePath + `articles/outputs/outputs-${item * 2 + 2}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            w="50%"
+          />
+        </ExampleRow>
+      ))}
     </>
   );
 };
