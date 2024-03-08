@@ -1,6 +1,9 @@
-import { chakra, Text, Image, Spinner, HStack, VStack } from "@chakra-ui/react";
+import { chakra, Text, Image, Spinner, HStack } from "@chakra-ui/react";
+import { range } from "lodash";
 
 const RenderMagazineContent = () => {
+  const imagePath = "/assets/images/graphic-design/designs/render-magazine/";
+
   return (
     <>
       <AppText textAlign="left" fontSize="30px">
@@ -68,6 +71,77 @@ const RenderMagazineContent = () => {
         them. This decision-making ultimately came down to the image and the
         colour used, and has no broad, universally applied principle.
       </AppText>
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Typography
+      </AppText>
+      <AppText fontSize="20px">
+        The main influences for the font were science fiction, futurism,
+        fashion, and luxuriousness. To cater for this, a slender, simplistic
+        font was envisioned as the ideal typography to be used throughout the
+        project. Several fonts were considered, including "Aldrich", "Lexend",
+        "Exo", and "Federo", but ultimately the "Genos" typography was decided
+        upon, as its sleek and innocuous presentation matched the requirements
+        described above.
+      </AppText>
+      <AppText textAlign="center" fontSize="16px">
+        Typography Considerations
+      </AppText>
+      <ExampleRow mt="40px" h="400px">
+        <Image
+          src={imagePath + "typography-1.png"}
+          fallback={<Spinner size="xl" color="white" />}
+          h="100%"
+        />
+        <Image
+          src={imagePath + "typography-2.png"}
+          fallback={<Spinner size="xl" color="white" />}
+          h="100%"
+        />
+      </ExampleRow>
+      <AppText textAlign="left" fontSize="30px">
+        Cover Designs
+      </AppText>
+      <ExampleRow mt="40px">
+        <Image
+          src={imagePath + "covers/cover-1.png"}
+          fallback={<Spinner size="xl" color="white" />}
+          h="700px"
+        />
+        <AppText fontSize="20px" w="45%" alignSelf="flex-start">
+          The cover designs are largely dominated by the image subject matter.
+          The magazine title fills roughly the top 20% to 25% of the image, and
+          its font colour was largely chosen to constrast, but not detract from,
+          the subject image. A couple different designs were experimented with
+          for the title text, including just having a filled singular hue, as
+          well as an iteration that had a glassmorphism fill and a solid hue
+          outline. The latter iteration seems to work well with subject images
+          that contained various hues, but sometimes a flat hue was able to
+          produce a good result. The cover designs also included headlines and
+          subtitle text for various articles contained within the issue, limited
+          to four. While experimenting, I found that any more than this seemed
+          to detract too much from the cover image. The location of these
+          headline/subtitle combinations was entirely dependant on the subject
+          matter image, and were usually placed within gaps or vacant spaces in
+          said images.
+        </AppText>
+      </ExampleRow>
+      <AppText textAlign="center" fontSize="20px">
+        All Cover Designs
+      </AppText>
+      {range(9).map((item) => (
+        <ExampleRow key={item} mt="20px">
+          <Image
+            src={imagePath + `covers/cover-${2 + item * 2}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            h="600px"
+          />
+          <Image
+            src={imagePath + `covers/cover-${2 + item * 2 + 1}.png`}
+            fallback={<Spinner size="xl" color="white" />}
+            h="600px"
+          />
+        </ExampleRow>
+      ))}
     </>
   );
 };
