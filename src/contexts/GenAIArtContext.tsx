@@ -44,6 +44,8 @@ enum GenAIArtViewed {
   DetailedCyberneticWarrior1 = "DetailedCyberneticWarrior1",
   ArmouredVampireDragon2 = "ArmouredVampireDragon2",
   CyberpunkWarriorGirl1 = "CyberpunkWarriorGirl1",
+  CyborgMetalDemon1 = "CyborgMetalDemon1",
+  PorcelainCyberpunkModel1 = "PorcelainCyberpunkModel1",
 }
 
 interface IGenAIArtContext {

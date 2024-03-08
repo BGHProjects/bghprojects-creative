@@ -379,4 +379,23 @@ export const content: Record<string, any> = {
     link: "https://www.bing.com/images/create",
     len: 3,
   },
+  [GenAIArtViewed.CyborgMetalDemon1]: {
+    artOption: GenAIArtViewed.CyborgMetalDemon1,
+    filePath: "cyborg-metal-demon-1",
+    ext: ".jpg",
+    prompt: "cyborg demon, hyperrealistic detailed image, red neon colouring",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.PorcelainCyberpunkModel1]: {
+    artOption: GenAIArtViewed.PorcelainCyberpunkModel1,
+    filePath: "porcelain-cyberpunk-model-1",
+    ext: ".jpg",
+    prompt:
+      "porcelain statue of a handsome cyberpunk model, with one half of his face burning with purple flames, realistic, detailed, smooth, sharp",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
 };
