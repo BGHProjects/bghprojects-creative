@@ -11,14 +11,14 @@ const RenderMagazineContent = () => {
       </AppText>
       <AppText fontSize="20px">
         The following is a project where I designed relevant aspects of a
-        fictional futuristic fashion magazine called RENDER.
+        fictional futuristic AI fashion magazine called RENDER.
       </AppText>
       <AppText textAlign="left" fontSize="30px">
         Problem Brief
       </AppText>
       <AppText fontSize="20px">
-        A group of creatives would want to commericalise the emerging AI art
-        space. They plan to achieve this by releasing a magazine, containing
+        A group of creatives want to commericalise the emerging AI art space.
+        They plan to achieve this by releasing a magazine, containing
         information regarding the latest news in the AI art world, interviews
         with AI prompting artists, emerging developments in machine learning
         models that produce AI models, prompt engineering guides for would-be AI
