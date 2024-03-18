@@ -43,7 +43,7 @@ const PulseContent = () => {
         Design Overview
       </AppText>
       <AppText fontSize="20px">
-        In total, seventeen designs were iterated, represented the different
+        In total, seventeen designs were iterated, representing the different
         required functionality as outlined in the Problem Brief. In regards to
         the flow of the app's usage, a user begins using the app by linking
         their existing gaming accounts and devices to the PULSE app. Following

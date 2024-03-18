@@ -11,6 +11,7 @@ enum UIUXDesignViewed {
   None = "None",
   ToTheStars = "ToTheStars",
   Pulse = "Pulse",
+  Kicks = "Kicks",
 }
 
 interface IUIUXDesignContext {

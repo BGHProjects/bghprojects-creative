@@ -43,6 +43,11 @@ const UIUXDesign = () => {
       image: "pulse-logo.png",
       action: () => handleSetUIUXDesignViewed(UIUXDesignViewed.Pulse),
     },
+    {
+      text: "KICKS",
+      image: "kicks-logo.png",
+      action: () => handleSetUIUXDesignViewed(UIUXDesignViewed.Kicks),
+    },
   ];
 
   const optionButtonProps = {
