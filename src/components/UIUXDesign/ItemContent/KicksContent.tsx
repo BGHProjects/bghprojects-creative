@@ -136,7 +136,7 @@ const KicksContent = () => {
       <AppText textAlign="left" fontSize="24px" pl="5%">
         App Start
       </AppText>
-      <AppText fontSize="20px" mb="40px">
+      <AppText fontSize="20px">
         The app starts at the log in page, allowing the user to sign in with a
         username and password combination, or their Google, Facebook, or
         Microsoft account. When deployed the designs on the left hand side would
@@ -150,10 +150,183 @@ const KicksContent = () => {
       <Image
         src={imagePath + "webapp/Sign In Page.png"}
         fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
       />
       <Image
         src={imagePath + "webapp/Home Page.png"}
         fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Create
+      </AppText>
+      <AppText fontSize="20px">
+        The Create section is where the user iterates their designs for the
+        shoes they want to purchase. Initially, they must choose the type of
+        shoe that they want to design. From there, they are given the four
+        options of designing their shoe as described previously.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/Create Start Page.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Input Options.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Text Prompt Option
+      </AppText>
+      <AppText fontSize="20px">
+        The first option is Text Prompt. This allows the user to enter in a text
+        prompt for the shoe they would like to design, as if they are submitting
+        a prompt to a text-to-image AI. A series of generated words are
+        presented to them underneath the search bar, which when pressed will be
+        added to the contents of their input. The refresh icon below these will
+        generate a new series of word options to use. Once the user has
+        submitted their text prompt, a confirmation page will be displyed,
+        showing them what they have submitted. From here, the user can either go
+        back and edit the prompt, add another input to be used to generate the
+        shoe, or simply generate the shoe with the inputs that have already been
+        given. After this, four designs will be iterate for the user to select.
+        Once they select their design, they will be required to name the design
+        and select a shoe size, before they are taken to complete their
+        purchase. Although a simple image is shown to the user, in the
+        background a more sophisticated design file would be generated, which is
+        then sent to the manufacturing team to create the shoe. This file and
+        functionality does not need to be included in the client-facing UI and
+        UX.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/Text Prompt.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Text Prompt Confirmation.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Generating Designs Page.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Your Designs Page (Text Prompt).png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Chosen Design Page.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Image Input Option
+      </AppText>
+      <AppText fontSize="20px">
+        The second option is Text Prompt. This allows the user to submit one or
+        multiple non-copyrighted images to be used to generate the design.
+        Copyrighted images would be detected through machine learning processes
+        and disallowed by the application. Similar to Text Prompt, a
+        confirmation screen would be provided to the user, and from there they
+        would continue the process the same as if they had selected Text Prompt.
+        UX.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/Image Input.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Image Input Confirmation.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Your Designs Page (Image Input).png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Colour Palette Option
+      </AppText>
+      <AppText fontSize="20px">
+        The last of the generative options if Colour Palette. Here, a series of
+        colour palettes are generated and presented to the used. Each palette
+        contains a primary, secondary, and tertiary colour to be used in the
+        design. The page also allows the used to manually enter their own
+        primary, secondary, and tertiary colours as a text input, using any of
+        the relevant design formats including hexcode, HSL, and RGB. From here,
+        the process continues the same way as the other processes.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/Colour Palette Input.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Colour Palette Confirmation.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Your Designs Page (Colour Palette).png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Community
+      </AppText>
+      <AppText fontSize="20px">
+        In this section of the app, the user can see other designs that have
+        been generated by the community, and can purchase those designs if they
+        so choose. The designs are presented in a grid, with each design
+        including its name, the user who generated it, and the price. If the
+        user is interested in the design and clicks on it, they are taken to a
+        confirmation page, enabling them to enter their shoe size to then
+        complete the purchase.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/Community.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <Image
+        src={imagePath + "webapp/Community Individual Page.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        Purchases
+      </AppText>
+      <AppText fontSize="20px">
+        On this page, the user can see their purchasing history. Each purchase
+        contains an image of the shoe, its name (and generated ID), the order
+        date, order total, and order number. In also includes the progress of
+        the order's delivery, as well as other options available to them,
+        including returning the order, cancelling it, viewing the shoe, and
+        leaving feedback.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/Purchases.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
+      />
+      <AppText textAlign="left" fontSize="24px" pl="5%">
+        FAQs
+      </AppText>
+      <AppText fontSize="20px">
+        Here the user can view the different FAQs for the application, viewed as
+        a list of dropdowns containing the questions and answers.
+      </AppText>
+      <Image
+        src={imagePath + "webapp/FAQs Page Question Opened.png"}
+        fallback={<Spinner size="xl" color="white" />}
+        mt="40px"
       />
     </>
   );
