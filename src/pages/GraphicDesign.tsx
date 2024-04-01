@@ -51,6 +51,12 @@ const GraphicDesign = () => {
       action: () =>
         handleSetGraphicDesignViewed(GraphicDesignViewed.RenderMagazine),
     },
+    {
+      text: "Braveborne Saga Covers",
+      image: "braveborne-logo.png",
+      action: () =>
+        handleSetGraphicDesignViewed(GraphicDesignViewed.BraveborneCovers),
+    },
   ];
 
   const optionButtonProps = {

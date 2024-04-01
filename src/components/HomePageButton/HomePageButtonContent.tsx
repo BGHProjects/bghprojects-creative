@@ -27,6 +27,8 @@ const HomePageButtonContent = ({
           color: "white",
           textAlign: "center",
           position: "absolute",
+          paddingLeft: "10px",
+          paddingRight: "10px",
         }}
         animate={
           {

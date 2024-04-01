@@ -12,6 +12,7 @@ enum GraphicDesignViewed {
   CovenantCurrency = "CovenantCurrency",
   BionicleTCG = "BionicleTCG",
   RenderMagazine = "RenderMagazine",
+  BraveborneCovers = "BraveborneCovers",
 }
 
 interface IGraphicDesignContext {
