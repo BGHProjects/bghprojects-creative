@@ -11,9 +11,12 @@ import { motion } from "framer-motion";
 import PopUpText from "../components/PopUpText";
 import HomePageButton from "../components/HomePageButton/HomePageButton";
 import GraphicDesignContentFrame from "../components/GraphicDesign/GraphicDesignContentFrame";
-import { customScrollBar } from "../consts/custom-scrollbar";
 
 const animDelay = 0.33;
+const buttonHeight = 100;
+const buttonWidth = 250;
+const containerPadding = 20;
+const buttonScale = 1.2;
 
 /**
  * Page that holds the content for the Graphic Design
@@ -60,8 +63,8 @@ const GraphicDesign = () => {
   ];
 
   const optionButtonProps = {
-    height: 120,
-    width: 280,
+    height: buttonHeight,
+    width: buttonWidth,
     fontSize: 24,
     animDuration: 0.2,
   };
@@ -99,17 +102,20 @@ const GraphicDesign = () => {
             </Center>
 
             <Grid
-              templateColumns={"repeat(2,1fr)"}
+              templateColumns={"repeat(3,1fr)"}
               templateRows={"repeat(2,1fr)"}
               gap={10}
-              p="20px"
-              mt="40px"
-              maxH="60%"
-              overflowY="auto"
-              sx={customScrollBar}
+              w={
+                buttonWidth * buttonScale * buttons.length +
+                containerPadding * 2
+              }
+              p={`${containerPadding}px`}
+              maxW="900px"
+              maxH="600px"
+              minH={buttonHeight * 2 + 200}
             >
               {buttons.map((button, index) => (
-                <GridItem key={JSON.stringify(button)} w="440px" h="220px">
+                <GridItem key={JSON.stringify(button)}>
                   <Center boxSize="100%">
                     <HomePageButton
                       {...{

@@ -1,5 +1,6 @@
 import KicksContent from "../../components/UIUXDesign/ItemContent/KicksContent";
 import PulseContent from "../../components/UIUXDesign/ItemContent/PulseContent";
+import SolContent from "../../components/UIUXDesign/ItemContent/SolContent";
 import ToTheStarsContent from "../../components/UIUXDesign/ItemContent/ToTheStarsContent";
 import { UIUXDesignViewed } from "../../contexts/UIUXDesignContext";
 
@@ -18,5 +19,10 @@ export const content: Record<string, any> = {
     title: "KICKS",
     content: <KicksContent />,
     background: "kicks.jpg",
+  },
+  [UIUXDesignViewed.Sol]: {
+    title: "Sol FPS Loadout Menu",
+    content: <SolContent />,
+    background: "sol.jpg",
   },
 };
