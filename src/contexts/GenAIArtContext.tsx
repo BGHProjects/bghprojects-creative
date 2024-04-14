@@ -46,6 +46,9 @@ enum GenAIArtViewed {
   CyberpunkWarriorGirl1 = "CyberpunkWarriorGirl1",
   CyborgMetalDemon1 = "CyborgMetalDemon1",
   PorcelainCyberpunkModel1 = "PorcelainCyberpunkModel1",
+  UndergroundLightCave1 = "UndergroundLightCave1",
+  RoyalAlienPriests1 = "RoyalAlienPriests1",
+  AlienGodStatue1 = "AlienGodStatue1",
 }
 
 interface IGenAIArtContext {

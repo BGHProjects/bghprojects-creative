@@ -398,4 +398,34 @@ export const content: Record<string, any> = {
     link: "https://www.bing.com/images/create",
     len: 4,
   },
+  [GenAIArtViewed.UndergroundLightCave1]: {
+    artOption: GenAIArtViewed.UndergroundLightCave1,
+    filePath: "underground-light-cave-1",
+    ext: ".jpg",
+    prompt:
+      "The inside of a vast underground cave, with metallic carved stone, and trails of floating, glowing runic symbols lining the walls and roads",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.RoyalAlienPriests1]: {
+    artOption: GenAIArtViewed.RoyalAlienPriests1,
+    filePath: "royal-alien-priests-1",
+    ext: ".jpg",
+    prompt:
+      "Hyperrealistic, smooth, sharp, detailed image of an army of royal, religious paladin cyber alien warriors, with pearl white, gold, and purple colour scheme, wearing immaculate flowing robes and slender, smooth power armour, raising their arms into the sky as rays of neon purple light shine down on them. A floating, futuristic space temple is in the background.",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
+  [GenAIArtViewed.AlienGodStatue1]: {
+    artOption: GenAIArtViewed.AlienGodStatue1,
+    filePath: "alien-god-statue-1",
+    ext: ".jpg",
+    prompt:
+      "A gigantic black and gold marble statue of an alien god, inside of a futuristic, royal, alien, robotic temple, with a procession of thousands of robed followers bowing down to it.",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
 };
