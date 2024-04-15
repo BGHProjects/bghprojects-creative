@@ -61,7 +61,7 @@ const GraphicDesignContentFrame = () => {
         pt="40px"
         pb="100px"
         overflow="auto"
-        px={{ base: "10px", md: "40px", lg: "70px" }}
+        px={{ base: "10px", md: "40px", lg: "40px" }}
         sx={customScrollBar}
       >
         <GraphicDesignBackButton />

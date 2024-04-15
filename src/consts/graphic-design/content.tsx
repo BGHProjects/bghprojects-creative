@@ -1,6 +1,7 @@
 import BionicleTCGContent from "../../components/GraphicDesign/ItemContent/BionicleTCGContent";
 import BraveborneCoversContent from "../../components/GraphicDesign/ItemContent/BraveborneCoversContent";
 import CovenantCurrencyContent from "../../components/GraphicDesign/ItemContent/CovenantCurrencyContent";
+import HelldiversJerseyContent from "../../components/GraphicDesign/ItemContent/HelldiversJerseyContent";
 import RenderMagazineContent from "../../components/GraphicDesign/ItemContent/RenderMagazineContent";
 import { GraphicDesignViewed } from "../../contexts/GraphicDesignContext";
 
@@ -24,5 +25,10 @@ export const content: Record<string, any> = {
     title: "Braveborne Saga Covers",
     content: <BraveborneCoversContent />,
     background: "braveborne-bg.jpg",
+  },
+  [GraphicDesignViewed.HelldiversJersey]: {
+    title: "Helldivers Jersey",
+    content: <HelldiversJerseyContent />,
+    background: "helldivers-jersey.jpg",
   },
 };

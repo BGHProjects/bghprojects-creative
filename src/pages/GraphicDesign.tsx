@@ -60,6 +60,12 @@ const GraphicDesign = () => {
       action: () =>
         handleSetGraphicDesignViewed(GraphicDesignViewed.BraveborneCovers),
     },
+    {
+      text: "Helldivers Jersey",
+      image: "helldivers-jersey-logo.png",
+      action: () =>
+        handleSetGraphicDesignViewed(GraphicDesignViewed.HelldiversJersey),
+    },
   ];
 
   const optionButtonProps = {

@@ -13,6 +13,7 @@ enum GraphicDesignViewed {
   BionicleTCG = "BionicleTCG",
   RenderMagazine = "RenderMagazine",
   BraveborneCovers = "BraveborneCovers",
+  HelldiversJersey = "HelldiversJersey",
 }
 
 interface IGraphicDesignContext {
