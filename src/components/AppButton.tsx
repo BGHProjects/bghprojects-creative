@@ -61,7 +61,7 @@ const AppButton = ({
         },
       }}
     >
-      <Center boxSize="100%" bg="rgba(0,0,0,0.5)" borderRadius="10px" px="30px">
+      <Center boxSize="100%" bg="rgba(0,0,0,0.5)" borderRadius="10px">
         {cloneElement(children as ReactElement, {
           justRendered,
           hovering,
