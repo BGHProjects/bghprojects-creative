@@ -13,6 +13,7 @@ enum UIUXDesignViewed {
   Pulse = "Pulse",
   Kicks = "Kicks",
   Sol = "Sol",
+  VanguardHeroCall = "VanguardHeroCall",
 }
 
 interface IUIUXDesignContext {

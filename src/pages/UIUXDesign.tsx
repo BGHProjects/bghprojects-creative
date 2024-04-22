@@ -57,6 +57,12 @@ const UIUXDesign = () => {
       image: "sol-logo.png",
       action: () => handleSetUIUXDesignViewed(UIUXDesignViewed.Sol),
     },
+    {
+      text: "Vanguard HeroCall",
+      image: "vanguard-herocall-logo.png",
+      action: () =>
+        handleSetUIUXDesignViewed(UIUXDesignViewed.VanguardHeroCall),
+    },
   ];
 
   const optionButtonProps = {
