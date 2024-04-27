@@ -2,6 +2,7 @@ import BionicleTCGContent from "../../components/GraphicDesign/ItemContent/Bioni
 import BraveborneCoversContent from "../../components/GraphicDesign/ItemContent/BraveborneCoversContent";
 import CovenantCurrencyContent from "../../components/GraphicDesign/ItemContent/CovenantCurrencyContent";
 import HelldiversJerseyContent from "../../components/GraphicDesign/ItemContent/HelldiversJerseyContent";
+import NRBAMediaContent from "../../components/GraphicDesign/ItemContent/NRBAMediaContent";
 import RenderMagazineContent from "../../components/GraphicDesign/ItemContent/RenderMagazineContent";
 import { GraphicDesignViewed } from "../../contexts/GraphicDesignContext";
 
@@ -30,5 +31,10 @@ export const content: Record<string, any> = {
     title: "Helldivers Jersey",
     content: <HelldiversJerseyContent />,
     background: "helldivers-jersey.jpg",
+  },
+  [GraphicDesignViewed.NRBAMedia]: {
+    title: "NRBA Promo Media",
+    content: <NRBAMediaContent />,
+    background: "nrba-media.jpg",
   },
 };

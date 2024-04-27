@@ -14,6 +14,7 @@ enum GraphicDesignViewed {
   RenderMagazine = "RenderMagazine",
   BraveborneCovers = "BraveborneCovers",
   HelldiversJersey = "HelldiversJersey",
+  NRBAMedia = "NRBAMedia",
 }
 
 interface IGraphicDesignContext {

@@ -66,6 +66,11 @@ const GraphicDesign = () => {
       action: () =>
         handleSetGraphicDesignViewed(GraphicDesignViewed.HelldiversJersey),
     },
+    {
+      text: "NRBA Promo Media",
+      image: "nrba-media.png",
+      action: () => handleSetGraphicDesignViewed(GraphicDesignViewed.NRBAMedia),
+    },
   ];
 
   const optionButtonProps = {
