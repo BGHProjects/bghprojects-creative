@@ -21,6 +21,7 @@ import GenAIArt from "./pages/GenAIArt.tsx";
 import { UIUXDesignContextProvider } from "./contexts/UIUXDesignContext.tsx";
 import UIUXDesign from "./pages/UIUXDesign.tsx";
 import HowImLearning from "./pages/HowImLearning.tsx";
+import CreativeCoding from "./pages/CreativeCoding.tsx";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         )}
       />
     ),
+  },
+  {
+    path: "/creative-coding",
+    element: <LoadAssets PageToLoad={() => <CreativeCoding />} />,
   },
   {
     path: "/gen-ai-art",

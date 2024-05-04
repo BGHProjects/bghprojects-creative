@@ -104,7 +104,7 @@ const GameDesign = () => {
             </Center>
 
             <Grid
-              templateColumns={"repeat(2,1fr)"}
+              templateColumns={"repeat(3,1fr)"}
               templateRows={"repeat(2,1fr)"}
               gap={10}
               p="20px"

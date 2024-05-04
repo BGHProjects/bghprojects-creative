@@ -51,6 +51,11 @@ const Home = () => {
       action: () => handleNavigate("/ui-ux-design"),
     },
     {
+      text: "Creative Coding",
+      image: "home-logos/creative-coding.png",
+      action: () => handleNavigate("/creative-coding"),
+    },
+    {
       text: "How I'm Learning",
       image: "home-logos/learning.png",
       action: () => handleNavigate("/how-im-learning"),
