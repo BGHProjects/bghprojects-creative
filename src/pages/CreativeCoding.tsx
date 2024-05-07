@@ -25,6 +25,11 @@ const CreativeCoding = () => {
       image: imageLocationPrefix + "slicing-colours.svg",
       link: "https://slicing-colours.vercel.app/",
     },
+    {
+      text: "Particle Highway",
+      image: imageLocationPrefix + "particle-highway.PNG",
+      link: "https://particle-highway.vercel.app/",
+    },
   ];
 
   return (
@@ -55,7 +60,7 @@ const CreativeCoding = () => {
             maxW="900px"
             maxH="600px"
             minH={buttonHeight * 2 + 200}
-            minW={buttonWidth * 2 + 200}
+            minW={buttonWidth * 3 + 200}
           >
             {buttons.map((button, index) => (
               <GridItem key={JSON.stringify(button)}>
