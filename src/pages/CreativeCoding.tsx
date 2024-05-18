@@ -30,6 +30,11 @@ const CreativeCoding = () => {
       image: imageLocationPrefix + "particle-highway.PNG",
       link: "https://particle-highway.vercel.app/",
     },
+    {
+      text: "Hyperspace Chase",
+      image: imageLocationPrefix + "hyperspace-chase.png",
+      link: "https://hyperspace-chase.vercel.app/",
+    },
   ];
 
   return (
