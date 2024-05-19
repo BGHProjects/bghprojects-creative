@@ -8,8 +8,8 @@ import { customScrollBar } from "../consts/custom-scrollbar";
 import CreativeCodingItemButton from "../components/CreativeCoding/CreativeCodingItemButton";
 
 const animDelay = 0.33;
-const buttonHeight = 180;
-const buttonWidth = 350;
+const buttonHeight = 150;
+const buttonWidth = 300;
 const containerPadding = 20;
 const buttonScale = 1.2;
 
@@ -34,6 +34,11 @@ const CreativeCoding = () => {
       text: "Hyperspace Chase",
       image: imageLocationPrefix + "hyperspace-chase.png",
       link: "https://hyperspace-chase.vercel.app/",
+    },
+    {
+      text: "Flow Fire",
+      image: imageLocationPrefix + "flow-fire.PNG",
+      link: "https://flow-fire.vercel.app/",
     },
   ];
 
