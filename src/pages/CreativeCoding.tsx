@@ -40,6 +40,11 @@ const CreativeCoding = () => {
       image: imageLocationPrefix + "flow-fire.PNG",
       link: "https://flow-fire.vercel.app/",
     },
+    {
+      text: "Synthwave Spaceway",
+      image: imageLocationPrefix + "synthwave-spaceway.png",
+      link: "https://synthwave-spaceway.vercel.app/",
+    },
   ];
 
   return (
