@@ -22,6 +22,8 @@ import { UIUXDesignContextProvider } from "./contexts/UIUXDesignContext.tsx";
 import UIUXDesign from "./pages/UIUXDesign.tsx";
 import HowImLearning from "./pages/HowImLearning.tsx";
 import CreativeCoding from "./pages/CreativeCoding.tsx";
+import { WorldbuildingContextProvider } from "./contexts/WorldbuildingContext.tsx";
+import WorldBuilding from "./pages/Worldbuilding.tsx";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +84,18 @@ const router = createBrowserRouter([
           <GenAIArtContextProvider>
             <GenAIArt />
           </GenAIArtContextProvider>
+        )}
+      />
+    ),
+  },
+  {
+    path: "/worldbuilding",
+    element: (
+      <LoadAssets
+        PageToLoad={() => (
+          <WorldbuildingContextProvider>
+            <WorldBuilding />
+          </WorldbuildingContextProvider>
         )}
       />
     ),

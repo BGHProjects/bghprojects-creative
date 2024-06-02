@@ -56,6 +56,11 @@ const Home = () => {
       action: () => handleNavigate("/creative-coding"),
     },
     {
+      text: "Worldbuilding",
+      image: "home-logos/worldbuilding.png",
+      action: () => handleNavigate("/worldbuilding"),
+    },
+    {
       text: "How I'm Learning",
       image: "home-logos/learning.png",
       action: () => handleNavigate("/how-im-learning"),

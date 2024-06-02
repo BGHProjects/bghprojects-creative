@@ -49,6 +49,7 @@ enum GenAIArtViewed {
   UndergroundLightCave1 = "UndergroundLightCave1",
   RoyalAlienPriests1 = "RoyalAlienPriests1",
   AlienGodStatue1 = "AlienGodStatue1",
+  RedBlackInkMoonGirl = "RedBlackInkMoonGirl",
 }
 
 interface IGenAIArtContext {

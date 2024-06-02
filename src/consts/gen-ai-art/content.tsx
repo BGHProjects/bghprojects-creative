@@ -428,4 +428,14 @@ export const content: Record<string, any> = {
     link: "https://www.bing.com/images/create",
     len: 4,
   },
+  [GenAIArtViewed.RedBlackInkMoonGirl]: {
+    artOption: GenAIArtViewed.RedBlackInkMoonGirl,
+    filePath: "red-black-ink-moon-girl",
+    ext: ".jpg",
+    prompt:
+      "Hyperrealistic photo of a moon melting and dripping like a waterfall with colorful lights. The melt from the moon is red, black, gold. A beautiful and graceful girl. Long black hair. Located right in the melted vortex of the moon. Splashes of melt come out of the vortex. Its vortex releases graceful twilight silver smoke. Space Background Full Of Stars. Hyperrealistic. HD 4K",
+    ai: "Image Creator from Microsoft Designer - Bing",
+    link: "https://www.bing.com/images/create",
+    len: 4,
+  },
 };
