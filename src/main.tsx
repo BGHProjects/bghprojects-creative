@@ -24,6 +24,7 @@ import HowImLearning from "./pages/HowImLearning.tsx";
 import CreativeCoding from "./pages/CreativeCoding.tsx";
 import { WorldbuildingContextProvider } from "./contexts/WorldbuildingContext.tsx";
 import WorldBuilding from "./pages/Worldbuilding.tsx";
+import Writing from "./pages/Writing.tsx";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
         )}
       />
     ),
+  },
+  {
+    path: "/writing",
+    element: <LoadAssets PageToLoad={() => <Writing />} />,
   },
   {
     path: "/creative-coding",

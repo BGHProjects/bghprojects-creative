@@ -31,9 +31,9 @@ const Home = () => {
       action: () => handleNavigate("/game-design"),
     },
     {
-      text: "Concept Art",
-      image: "home-logos/concept-art-logo.svg",
-      action: () => alert("Under Construction. Visit again soon."),
+      text: "Writing",
+      image: "home-logos/writing.png",
+      action: () => handleNavigate("/writing"),
     },
     {
       text: "Graphic Design",
@@ -54,11 +54,6 @@ const Home = () => {
       text: "Creative Coding",
       image: "home-logos/creative-coding.png",
       action: () => handleNavigate("/creative-coding"),
-    },
-    {
-      text: "Worldbuilding",
-      image: "home-logos/worldbuilding.png",
-      action: () => handleNavigate("/worldbuilding"),
     },
     {
       text: "How I'm Learning",
